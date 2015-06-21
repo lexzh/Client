@@ -1,0 +1,1982 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D6F6234-E2D0-4D04-ACF2-8908353B5B55}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>Client</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\%40Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\%40Bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\%40Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\%40Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\@Libraries\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="ParamLibrary">
+      <HintPath>..\@Libraries\ParamLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PublicClass">
+      <HintPath>..\@Libraries\PublicClass.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttachData.cs" />
+    <Compile Include="AttachInfoResolve.cs" />
+    <Compile Include="AttachParser.cs" />
+    <Compile Include="CarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarForm.Designer.cs">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarList.Designer.cs">
+      <DependentUpon>CarList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoorState.cs" />
+    <Compile Include="FixedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedForm.Designer.cs">
+      <DependentUpon>FixedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GpsStation.cs" />
+    <Compile Include="GpsStationDAL.cs" />
+    <Compile Include="itmCarPlayTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarPlayTrack.Designer.cs">
+      <DependentUpon>itmCarPlayTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmPreSetStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmPreSetStation.Designer.cs">
+      <DependentUpon>itmPreSetStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmRealTimeImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmRealTimeImage.Designer.cs">
+      <DependentUpon>itmRealTimeImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSendTextMess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSendTextMess.Designer.cs">
+      <DependentUpon>itmSendTextMess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSegPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSegPath.Designer.cs">
+      <DependentUpon>JTBitmSegPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBPlatformPostResponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBPlatformPostResponse.Designer.cs">
+      <DependentUpon>JTBPlatformPostResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\PlatformcheckRoadSpeedAndRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\PlatformcheckRoadSpeedAndRank.Designer.cs">
+      <DependentUpon>PlatformcheckRoadSpeedAndRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogForms.Designer.cs">
+      <DependentUpon>LogForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mShootPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mShootPhoto.Designer.cs">
+      <DependentUpon>m2mShootPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumHelper.cs" />
+    <Compile Include="Other\MediaPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Other\MediaPlayer.Designer.cs">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DB44\db44AccidentData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB44\db44AccidentData.Designer.cs">
+      <DependentUpon>db44AccidentData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB44\db44MileageCnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB44\db44MileageCnt.Designer.cs">
+      <DependentUpon>db44MileageCnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB44\db44NoParamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB44\db44RealTimeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB44\db44RealTimeReport.Designer.cs">
+      <DependentUpon>db44RealTimeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB44\db44SetRemoteInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB44\db44SetRemoteInit.Designer.cs">
+      <DependentUpon>db44SetRemoteInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBCallPoliceSuperviseReponsion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBCallPoliceSuperviseReponsion.Designer.cs">
+      <DependentUpon>JTBCallPoliceSuperviseReponsion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBCarCancelRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBDynamicRepairInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBDynamicRepairInformation.Designer.cs">
+      <DependentUpon>JTBDynamicRepairInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBReplacementLocationInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBReplacementLocationInformation.Designer.cs">
+      <DependentUpon>JTBReplacementLocationInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBReportPoliceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\MonitoringPlatform\JTBReportPoliceInfo.Designer.cs">
+      <DependentUpon>JTBReportPoliceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBAcquisitionCarSpeedData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBAcquisitionCarSpeedData.Designer.cs">
+      <DependentUpon>JTBAcquisitionCarSpeedData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBControlTerminalConnectBySMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBControlTerminalConnectBySMS.Designer.cs">
+      <DependentUpon>JTBControlTerminalConnectBySMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBCumulativeDrivingTimeOfDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBCumulativeDrivingTimeOfDay.Designer.cs">
+      <DependentUpon>JTBCumulativeDrivingTimeOfDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBEventSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBEventSet.Designer.cs">
+      <DependentUpon>JTBEventSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBInformationService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBInformationService.Designer.cs">
+      <DependentUpon>JTBInformationService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBitmCancelRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBitmCancelRegionAlarm.Designer.cs">
+      <DependentUpon>JTBitmCancelRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBitmRealTimeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBitmRealTimeReport.Designer.cs">
+      <DependentUpon>JTBitmRealTimeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBMultimediaDataRetrieval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBMultimediaDataRetrieval.Designer.cs">
+      <DependentUpon>JTBMultimediaDataRetrieval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBMultimediaDataUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBMultimediaDataUpload.Designer.cs">
+      <DependentUpon>JTBMultimediaDataUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBQuestionManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBQuestionManage.Designer.cs">
+      <DependentUpon>JTBQuestionManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSendQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSendQuestion.Designer.cs">
+      <DependentUpon>JTBSendQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetCarNumberAndColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetCarNumberAndColor.Designer.cs">
+      <DependentUpon>JTBSetCarNumberAndColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetCarVinAndClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetCarVinAndClass.Designer.cs">
+      <DependentUpon>JTBSetCarVinAndClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetDriverCodeAndLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetDriverCodeAndLicense.Designer.cs">
+      <DependentUpon>JTBSetDriverCodeAndLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetElectronicRailRadius.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetElectronicRailRadius.Designer.cs">
+      <DependentUpon>JTBSetElectronicRailRadius.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetEngineOverspeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetEngineOverspeed.Designer.cs">
+      <DependentUpon>JTBSetEngineOverspeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetLongIdleTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetLongIdleTimes.Designer.cs">
+      <DependentUpon>JTBSetLongIdleTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetPathAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetPathAlarm.Designer.cs">
+      <DependentUpon>JTBSetPathAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetPictureParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetPictureParam.Designer.cs">
+      <DependentUpon>JTBSetPictureParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetProvincesDomainID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetProvincesDomainID.Designer.cs">
+      <DependentUpon>JTBSetProvincesDomainID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetRapidSlowdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetRapidSlowdown.Designer.cs">
+      <DependentUpon>JTBSetRapidSlowdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetResponseAndRetransmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetResponseAndRetransmission.Designer.cs">
+      <DependentUpon>JTBSetResponseAndRetransmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetTelephoneBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetTelephoneBook.Designer.cs">
+      <DependentUpon>JTBSetTelephoneBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSetUrgentAcceleration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSetUrgentAcceleration.Designer.cs">
+      <DependentUpon>JTBSetUrgentAcceleration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSigleMultimediaDataUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSigleMultimediaDataUpload.Designer.cs">
+      <DependentUpon>JTBSigleMultimediaDataUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBSoundRecordCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBSoundRecordCommand.Designer.cs">
+      <DependentUpon>JTBSoundRecordCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBTemporaryPositionTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBTemporaryPositionTracking.Designer.cs">
+      <DependentUpon>JTBTemporaryPositionTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBTerminalHeartInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBTerminalHeartInterval.Designer.cs">
+      <DependentUpon>JTBTerminalHeartInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBThoroughlyCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBThoroughlyCommand.Designer.cs">
+      <DependentUpon>JTBThoroughlyCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBTravellingClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBTravellingClock.Designer.cs">
+      <DependentUpon>JTBTravellingClock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\JTBWirelessUpgradeCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\JTBWirelessUpgradeCommand.Designer.cs">
+      <DependentUpon>JTBWirelessUpgradeCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTB\VideoBroadcast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTB\VideoBroadcast.Designer.cs">
+      <DependentUpon>VideoBroadcast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mCancelRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mCancelRegionAlarm.Designer.cs">
+      <DependentUpon>m2mCancelRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mCancleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mCancleReport.Designer.cs">
+      <DependentUpon>m2mCancleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mGetPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mGetPhoto.Designer.cs">
+      <DependentUpon>m2mGetPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mLedDelMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mLedDelMsg.Designer.cs">
+      <DependentUpon>m2mLedDelMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mLedSetLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mLedSetLight.Designer.cs">
+      <DependentUpon>m2mLedSetLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mLedSetTimeRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mLedSetTimeRes.Designer.cs">
+      <DependentUpon>m2mLedSetTimeRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mMapPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mMapPath.Designer.cs">
+      <DependentUpon>m2mMapPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mMeter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mMeter.Designer.cs">
+      <DependentUpon>m2mMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mModCenterPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mModCenterPhone.Designer.cs">
+      <DependentUpon>m2mModCenterPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mOilReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mOilReport.Designer.cs">
+      <DependentUpon>m2mOilReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mPreSetRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mPreSetRegion.Designer.cs">
+      <DependentUpon>m2mPreSetRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSendMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSendMsg.Designer.cs">
+      <DependentUpon>m2mSendMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetAlarmParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetAlarmParam.Designer.cs">
+      <DependentUpon>m2mSetAlarmParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetCarInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetCarInit.Designer.cs">
+      <DependentUpon>m2mSetCarInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetPathAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetPathAlarm.Designer.cs">
+      <DependentUpon>m2mSetPathAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionAlarm.Designer.cs">
+      <DependentUpon>m2mSetRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionSpeedAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionSpeedAlarm.Designer.cs">
+      <DependentUpon>m2mSetRegionSpeedAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionTimeAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetRegionTimeAlarm.Designer.cs">
+      <DependentUpon>m2mSetRegionTimeAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetSpeedInTimeAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetSpeedInTimeAlarm.Designer.cs">
+      <DependentUpon>m2mSetSpeedInTimeAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSetTyreAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSetTyreAlarm.Designer.cs">
+      <DependentUpon>m2mSetTyreAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M2M\m2mSmallArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M2M\m2mSmallArea.Designer.cs">
+      <DependentUpon>m2mSmallArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDiv.Designer.cs">
+      <DependentUpon>AdminDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlarmLog.Designer.cs">
+      <DependentUpon>AlarmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmSound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarAlarmEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarAlarmEx.Designer.cs">
+      <DependentUpon>CarAlarmEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarAlerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarAlerm.Designer.cs">
+      <DependentUpon>CarAlerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarFormBaseControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarFormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarFormEx.Designer.cs">
+      <DependentUpon>CarFormEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarImage.Designer.cs">
+      <DependentUpon>CarImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarImageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarImageList.Designer.cs">
+      <DependentUpon>CarImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTextList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTextList.Designer.cs">
+      <DependentUpon>CarTextList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnsVisibleType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurrentPos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurrentPos.Designer.cs">
+      <DependentUpon>CurrentPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DetailLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailLog.Designer.cs">
+      <DependentUpon>DetailLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlagForm.Designer.cs">
+      <DependentUpon>FlagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMoveState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getphoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getphoto.Designer.cs">
+      <DependentUpon>getphoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GpsClientObj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageList.Designer.cs">
+      <DependentUpon>ImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISimpleCommonArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="itemsettemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itemsettemp.Designer.cs">
+      <DependentUpon>itemsettemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmBeListen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmBeListen.Designer.cs">
+      <DependentUpon>itmBeListen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmBlindRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmBlindRepair.Designer.cs">
+      <DependentUpon>itmBlindRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCancelOverSpeedEarly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCancelOverSpeedEarly.Designer.cs">
+      <DependentUpon>itmCancelOverSpeedEarly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCancelRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCancelRegionAlarm.Designer.cs">
+      <DependentUpon>itmCancelRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarBeBackTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarBeBackTime.Designer.cs">
+      <DependentUpon>itmCarBeBackTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarDetail.Designer.cs">
+      <DependentUpon>itmCarDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarForbidDriveAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarForbidDriveAlarm.Designer.cs">
+      <DependentUpon>itmCarForbidDriveAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarInOutOfRangeTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarInOutOfRangeTime.Designer.cs">
+      <DependentUpon>itmCarInOutOfRangeTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarLBSParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarLBSParam.Designer.cs">
+      <DependentUpon>itmCarLBSParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarOverTimeDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarOverTimeDrive.Designer.cs">
+      <DependentUpon>itmCarOverTimeDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarOverTimeStop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarOverTimeStop.Designer.cs">
+      <DependentUpon>itmCarOverTimeStop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarReport.Designer.cs">
+      <DependentUpon>itmCarReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCarReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCarReset.Designer.cs">
+      <DependentUpon>itmCarReset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmCutPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmCutPower.Designer.cs">
+      <DependentUpon>itmCutPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmImportReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmImportReport.Designer.cs">
+      <DependentUpon>itmImportReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmLockMeter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmLockMeter.Designer.cs">
+      <DependentUpon>itmLockMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmModCenterPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmModCenterPhone.Designer.cs">
+      <DependentUpon>itmModCenterPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmPointToPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmPointToPoint.Designer.cs">
+      <DependentUpon>itmPointToPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmPreSetPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmPreSetPath.Designer.cs">
+      <DependentUpon>itmPreSetPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmPreSetRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmPreSetRegion.Designer.cs">
+      <DependentUpon>itmPreSetRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmRealTimeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmRealTimeReport.Designer.cs">
+      <DependentUpon>itmRealTimeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmResetManagePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmResetManagePass.Designer.cs">
+      <DependentUpon>itmResetManagePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSegPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSegPath.Designer.cs">
+      <DependentUpon>itmSegPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetBlackReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetBlackReport.Designer.cs">
+      <DependentUpon>itmSetBlackReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetCarInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetCarInit.Designer.cs">
+      <DependentUpon>itmSetCarInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetDistrictAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetDistrictAlarm.Designer.cs">
+      <DependentUpon>itmSetDistrictAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetMileageCnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetMileageCnt.Designer.cs">
+      <DependentUpon>itmSetMileageCnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetOilAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetOilAlarm.Designer.cs">
+      <DependentUpon>itmSetOilAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetOilRefValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetOilRefValue.Designer.cs">
+      <DependentUpon>itmSetOilRefValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetOverSpeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetOverSpeed.Designer.cs">
+      <DependentUpon>itmSetOverSpeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetPass.Designer.cs">
+      <DependentUpon>itmSetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetPathAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetPathAlarm.Designer.cs">
+      <DependentUpon>itmSetPathAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetRegionAlarm.Designer.cs">
+      <DependentUpon>itmSetRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetRegionAlarmEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetRegionAlarmEx.Designer.cs">
+      <DependentUpon>itmSetRegionAlarmEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmSetSpeechSounds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmSetSpeechSounds.Designer.cs">
+      <DependentUpon>itmSetSpeechSounds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmStopReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmStopReport.Designer.cs">
+      <DependentUpon>itmStopReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmTaxiReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmTaxiReport.Designer.cs">
+      <DependentUpon>itmTaxiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmZBDistributary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmZBDistributary.Designer.cs">
+      <DependentUpon>itmZBDistributary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itmZBNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="itmZBNavigation.Designer.cs">
+      <DependentUpon>itmZBNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmCancelPathAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmCancelPathAlarm.Designer.cs">
+      <DependentUpon>JTBitmCancelPathAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmCutPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmCutPower.Designer.cs">
+      <DependentUpon>JTBitmCutPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSegPathEX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSegPathEX.Designer.cs">
+      <DependentUpon>JTBitmSegPathEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformPathAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformPathAlarm.Designer.cs">
+      <DependentUpon>JTBitmSetPlatformPathAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformPathSegmentAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformPathSegmentAlarm.Designer.cs">
+      <DependentUpon>JTBitmSetPlatformPathSegmentAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSetPlatformRegionAlarm.Designer.cs">
+      <DependentUpon>JTBitmSetPlatformRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBitmSetRegionAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBitmSetRegionAlarm.Designer.cs">
+      <DependentUpon>JTBitmSetRegionAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JTBSetCanGatherInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JTBSetCanGatherInterval.Designer.cs">
+      <DependentUpon>JTBSetCanGatherInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapFlag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapFlag.Designer.cs">
+      <DependentUpon>MapFlag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapPath.Designer.cs">
+      <DependentUpon>MapPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewLog.Designer.cs">
+      <DependentUpon>NewLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeDetailLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeDetailLog.Designer.cs">
+      <DependentUpon>NoticeDetailLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeForm.Designer.cs">
+      <DependentUpon>NoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NoticeLog.Designer.cs">
+      <DependentUpon>NoticeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenWebForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenWebForm.Designer.cs">
+      <DependentUpon>OpenWebForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathSegmentChange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PathSegmentChangeArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PerformanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceView.Designer.cs">
+      <DependentUpon>PerformanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryCarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryCarInfo.Designer.cs">
+      <DependentUpon>QueryCarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryMap.Designer.cs">
+      <DependentUpon>QueryMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecentUseMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecentUseMenuCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCarList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchCarList.Designer.cs">
+      <DependentUpon>SearchCarList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchFeature.Designer.cs">
+      <DependentUpon>SearchFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAlarmCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarmCondition.Designer.cs">
+      <DependentUpon>SetAlarmCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetDateTime.Designer.cs">
+      <DependentUpon>SetDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetLogFilterAlarmType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetLogFilterAlarmType.Designer.cs">
+      <DependentUpon>SetLogFilterAlarmType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetMenuCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetMenuCollection.Designer.cs">
+      <DependentUpon>SetMenuCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetParam.Designer.cs">
+      <DependentUpon>SetParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPathSegment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetPathSegment.Designer.cs">
+      <DependentUpon>SetPathSegment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SizableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SizableForm.Designer.cs">
+      <DependentUpon>SizableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StarNetComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarNetDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarNetNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarNetRadioButtonList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarNetTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarNetTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="testcmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCollectionMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkBench.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPathForm.Designer.cs">
+      <DependentUpon>ShowPathForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarForm.resx">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarList.resx">
+      <DependentUpon>CarList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB44\db44AccidentData.resx">
+      <DependentUpon>db44AccidentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB44\db44MileageCnt.resx">
+      <DependentUpon>db44MileageCnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB44\db44RealTimeReport.resx">
+      <DependentUpon>db44RealTimeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB44\db44SetRemoteInit.resx">
+      <DependentUpon>db44SetRemoteInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixedForm.resx">
+      <DependentUpon>FixedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarPlayTrack.resx">
+      <DependentUpon>itmCarPlayTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmPreSetStation.resx">
+      <DependentUpon>itmPreSetStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmRealTimeImage.resx">
+      <DependentUpon>itmRealTimeImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSendTextMess.resx">
+      <DependentUpon>itmSendTextMess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSegPath.resx">
+      <DependentUpon>JTBitmSegPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\MonitoringPlatform\JTBCallPoliceSuperviseReponsion.resx">
+      <DependentUpon>JTBCallPoliceSuperviseReponsion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\MonitoringPlatform\JTBDynamicRepairInformation.resx">
+      <DependentUpon>JTBDynamicRepairInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\MonitoringPlatform\JTBPlatformPostResponse.resx">
+      <DependentUpon>JTBPlatformPostResponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\MonitoringPlatform\JTBReplacementLocationInformation.resx">
+      <DependentUpon>JTBReplacementLocationInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\MonitoringPlatform\JTBReportPoliceInfo.resx">
+      <DependentUpon>JTBReportPoliceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBAcquisitionCarSpeedData.resx">
+      <DependentUpon>JTBAcquisitionCarSpeedData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBControlTerminalConnectBySMS.resx">
+      <DependentUpon>JTBControlTerminalConnectBySMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBCumulativeDrivingTimeOfDay.resx">
+      <DependentUpon>JTBCumulativeDrivingTimeOfDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBEventSet.resx">
+      <DependentUpon>JTBEventSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBInformationService.resx">
+      <DependentUpon>JTBInformationService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBitmCancelRegionAlarm.resx">
+      <DependentUpon>JTBitmCancelRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBitmRealTimeReport.resx">
+      <DependentUpon>JTBitmRealTimeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBMultimediaDataRetrieval.resx">
+      <DependentUpon>JTBMultimediaDataRetrieval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBMultimediaDataUpload.resx">
+      <DependentUpon>JTBMultimediaDataUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBQuestionManage.resx">
+      <DependentUpon>JTBQuestionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSendQuestion.resx">
+      <DependentUpon>JTBSendQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetCarNumberAndColor.resx">
+      <DependentUpon>JTBSetCarNumberAndColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetCarVinAndClass.resx">
+      <DependentUpon>JTBSetCarVinAndClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetDriverCodeAndLicense.resx">
+      <DependentUpon>JTBSetDriverCodeAndLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetElectronicRailRadius.resx">
+      <DependentUpon>JTBSetElectronicRailRadius.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetEngineOverspeed.resx">
+      <DependentUpon>JTBSetEngineOverspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetLongIdleTimes.resx">
+      <DependentUpon>JTBSetLongIdleTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetPathAlarm.resx">
+      <DependentUpon>JTBSetPathAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetPictureParam.resx">
+      <DependentUpon>JTBSetPictureParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetProvincesDomainID.resx">
+      <DependentUpon>JTBSetProvincesDomainID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetRapidSlowdown.resx">
+      <DependentUpon>JTBSetRapidSlowdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetResponseAndRetransmission.resx">
+      <DependentUpon>JTBSetResponseAndRetransmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetTelephoneBook.resx">
+      <DependentUpon>JTBSetTelephoneBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSetUrgentAcceleration.resx">
+      <DependentUpon>JTBSetUrgentAcceleration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSigleMultimediaDataUpload.resx">
+      <DependentUpon>JTBSigleMultimediaDataUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBSoundRecordCommand.resx">
+      <DependentUpon>JTBSoundRecordCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBTemporaryPositionTracking.resx">
+      <DependentUpon>JTBTemporaryPositionTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBTerminalHeartInterval.resx">
+      <DependentUpon>JTBTerminalHeartInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBThoroughlyCommand.resx">
+      <DependentUpon>JTBThoroughlyCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBTravellingClock.resx">
+      <DependentUpon>JTBTravellingClock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\JTBWirelessUpgradeCommand.resx">
+      <DependentUpon>JTBWirelessUpgradeCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\PlatformcheckRoadSpeedAndRank.resx">
+      <DependentUpon>PlatformcheckRoadSpeedAndRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTB\VideoBroadcast.resx">
+      <DependentUpon>VideoBroadcast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogForms.resx">
+      <DependentUpon>LogForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mCancelRegionAlarm.resx">
+      <DependentUpon>m2mCancelRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mCancleReport.resx">
+      <DependentUpon>m2mCancleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mGetPhoto.resx">
+      <DependentUpon>m2mGetPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mLedDelMsg.resx">
+      <DependentUpon>m2mLedDelMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mLedSetLight.resx">
+      <DependentUpon>m2mLedSetLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mLedSetTimeRes.resx">
+      <DependentUpon>m2mLedSetTimeRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mMapPath.resx">
+      <DependentUpon>m2mMapPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mMeter.resx">
+      <DependentUpon>m2mMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mModCenterPhone.resx">
+      <DependentUpon>m2mModCenterPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mOilReport.resx">
+      <DependentUpon>m2mOilReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mPreSetRegion.resx">
+      <DependentUpon>m2mPreSetRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSendMsg.resx">
+      <DependentUpon>m2mSendMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetAlarmParam.resx">
+      <DependentUpon>m2mSetAlarmParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetCarInit.resx">
+      <DependentUpon>m2mSetCarInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetPathAlarm.resx">
+      <DependentUpon>m2mSetPathAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetRegionAlarm.resx">
+      <DependentUpon>m2mSetRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetRegionSpeedAlarm.resx">
+      <DependentUpon>m2mSetRegionSpeedAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetRegionTimeAlarm.resx">
+      <DependentUpon>m2mSetRegionTimeAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetSpeedInTimeAlarm.resx">
+      <DependentUpon>m2mSetSpeedInTimeAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSetTyreAlarm.resx">
+      <DependentUpon>m2mSetTyreAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mShootPhoto.resx">
+      <DependentUpon>m2mShootPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M2M\m2mSmallArea.resx">
+      <DependentUpon>m2mSmallArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDiv.resx">
+      <DependentUpon>AdminDiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmLog.resx">
+      <DependentUpon>AlarmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarAlarmEx.resx">
+      <DependentUpon>CarAlarmEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarAlerm.resx">
+      <DependentUpon>CarAlerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarFormEx.resx">
+      <DependentUpon>CarFormEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarImage.resx">
+      <DependentUpon>CarImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarImageList.resx">
+      <DependentUpon>CarImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTextList.resx">
+      <DependentUpon>CarTextList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentPos.resx">
+      <DependentUpon>CurrentPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailLog.resx">
+      <DependentUpon>DetailLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlagForm.resx">
+      <DependentUpon>FlagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getphoto.resx">
+      <DependentUpon>getphoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageList.resx">
+      <DependentUpon>ImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemsettemp.resx">
+      <DependentUpon>itemsettemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmBeListen.resx">
+      <DependentUpon>itmBeListen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmBlindRepair.resx">
+      <DependentUpon>itmBlindRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCancelOverSpeedEarly.resx">
+      <DependentUpon>itmCancelOverSpeedEarly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCancelRegionAlarm.resx">
+      <DependentUpon>itmCancelRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarBeBackTime.resx">
+      <DependentUpon>itmCarBeBackTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarDetail.resx">
+      <DependentUpon>itmCarDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarForbidDriveAlarm.resx">
+      <DependentUpon>itmCarForbidDriveAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarInOutOfRangeTime.resx">
+      <DependentUpon>itmCarInOutOfRangeTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarLBSParam.resx">
+      <DependentUpon>itmCarLBSParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarOverTimeDrive.resx">
+      <DependentUpon>itmCarOverTimeDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarOverTimeStop.resx">
+      <DependentUpon>itmCarOverTimeStop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarReport.resx">
+      <DependentUpon>itmCarReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCarReset.resx">
+      <DependentUpon>itmCarReset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmCutPower.resx">
+      <DependentUpon>itmCutPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmImportReport.resx">
+      <DependentUpon>itmImportReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmLockMeter.resx">
+      <DependentUpon>itmLockMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmModCenterPhone.resx">
+      <DependentUpon>itmModCenterPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmPointToPoint.resx">
+      <DependentUpon>itmPointToPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmPreSetPath.resx">
+      <DependentUpon>itmPreSetPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmPreSetRegion.resx">
+      <DependentUpon>itmPreSetRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmRealTimeReport.resx">
+      <DependentUpon>itmRealTimeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmResetManagePass.resx">
+      <DependentUpon>itmResetManagePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSegPath.resx">
+      <DependentUpon>itmSegPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetBlackReport.resx">
+      <DependentUpon>itmSetBlackReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetCarInit.resx">
+      <DependentUpon>itmSetCarInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetDistrictAlarm.resx">
+      <DependentUpon>itmSetDistrictAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetMileageCnt.resx">
+      <DependentUpon>itmSetMileageCnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetOilAlarm.resx">
+      <DependentUpon>itmSetOilAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetOilRefValue.resx">
+      <DependentUpon>itmSetOilRefValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetOverSpeed.resx">
+      <DependentUpon>itmSetOverSpeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetPass.resx">
+      <DependentUpon>itmSetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetPathAlarm.resx">
+      <DependentUpon>itmSetPathAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetRegionAlarm.resx">
+      <DependentUpon>itmSetRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetRegionAlarmEx.resx">
+      <DependentUpon>itmSetRegionAlarmEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmSetSpeechSounds.resx">
+      <DependentUpon>itmSetSpeechSounds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmStopReport.resx">
+      <DependentUpon>itmStopReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmTaxiReport.resx">
+      <DependentUpon>itmTaxiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmZBDistributary.resx">
+      <DependentUpon>itmZBDistributary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itmZBNavigation.resx">
+      <DependentUpon>itmZBNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmCancelPathAlarm.resx">
+      <DependentUpon>JTBitmCancelPathAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmCutPower.resx">
+      <DependentUpon>JTBitmCutPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSegPathEX.resx">
+      <DependentUpon>JTBitmSegPathEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSetPlatformPathAlarm.resx">
+      <DependentUpon>JTBitmSetPlatformPathAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSetPlatformPathSegmentAlarm.resx">
+      <DependentUpon>JTBitmSetPlatformPathSegmentAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSetPlatformRegionAlarm.resx">
+      <DependentUpon>JTBitmSetPlatformRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBitmSetRegionAlarm.resx">
+      <DependentUpon>JTBitmSetRegionAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JTBSetCanGatherInterval.resx">
+      <DependentUpon>JTBSetCanGatherInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapFlag.resx">
+      <DependentUpon>MapFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapPath.resx">
+      <DependentUpon>MapPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewLog.resx">
+      <DependentUpon>NewLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeDetailLog.resx">
+      <DependentUpon>NoticeDetailLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeForm.resx">
+      <DependentUpon>NoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeLog.resx">
+      <DependentUpon>NoticeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenWebForm.resx">
+      <DependentUpon>OpenWebForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\MediaPlayer.resx">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceView.resx">
+      <DependentUpon>PerformanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryCarInfo.resx">
+      <DependentUpon>QueryCarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryMap.resx">
+      <DependentUpon>QueryMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchCarList.resx">
+      <DependentUpon>SearchCarList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchFeature.resx">
+      <DependentUpon>SearchFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAlarmCondition.resx">
+      <DependentUpon>SetAlarmCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetDateTime.resx">
+      <DependentUpon>SetDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLogFilterAlarmType.resx">
+      <DependentUpon>SetLogFilterAlarmType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetMenuCollection.resx">
+      <DependentUpon>SetMenuCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetParam.resx">
+      <DependentUpon>SetParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPathSegment.resx">
+      <DependentUpon>SetPathSegment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SizableForm.resx">
+      <DependentUpon>SizableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPathForm.resx">
+      <DependentUpon>ShowPathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DockPanel.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon\pleaseWait.JPG" />
+    <None Include="Config.ini" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\login.jpg" />
+    <Content Include="Sound\Alarm.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Disconnection.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\UrgencyAlarm.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Icon1.ico" />
+    <Content Include="seSkin\Glass.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\MacOS.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\MSN.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\Page.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\Steel.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\vssver.scc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="seSkin\XPSilver.ssk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1000.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1001.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1010.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2000.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2011.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2111.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_3000.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_4000.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_4001.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlarmCancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlarmSound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarImage红.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarImage黄.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarImage灰.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarImage蓝.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarImage绿.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullextent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mAlarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MulPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pathCalculate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pleaseWait.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-in1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-out1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询%2824%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{16B8D99C-9EF8-476F-92D1-DC94FB393AEA}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin\Plugin.csproj">
+      <Project>{366BE2FE-03DC-4368-A9AF-CC538EDABB28}</Project>
+      <Name>Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Remoting\Remoting.csproj">
+      <Project>{2787D492-BB9C-4E6A-8274-283E2EBB863E}</Project>
+      <Name>Remoting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

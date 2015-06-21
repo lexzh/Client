@@ -1,0 +1,212 @@
+﻿namespace Client.JTB
+{
+    using Client;
+    using PublicClass;
+    using Remoting;
+    using ParamLibrary.Application;
+    using ParamLibrary.CmdParamInfo;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Text;
+    using System.Windows.Forms;
+    using WinFormsUI.Controls;
+
+    partial class JTBSendQuestion
+    {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (this.components != null))
+            {
+                this.components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+       
+        private void InitializeComponent()
+        {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(JTBSendQuestion));
+            this.grpWatchProperty = new GroupBox();
+            this.txtanswerID = new TextBox();
+            this.chkAdFlag = new CheckBox();
+            this.chkTtsFlag = new CheckBox();
+            this.chkHandFlag = new CheckBox();
+            this.chkControlFlag = new CheckBox();
+            this.chkUrgencyFlag = new CheckBox();
+            this.cmbQuestion = new ComboBox();
+            this.lblQuestion = new Label();
+            this.lblAnswer = new Label();
+            this.dgvAnswer = new DataGridViewEx();
+            this.ID = new DataGridViewTextBoxColumn();
+            this.答案 = new DataGridViewTextBoxColumn();
+            this.ParentID = new DataGridViewTextBoxColumn();
+            this.lblQuestionType = new Label();
+            base.grpCar.SuspendLayout();
+            base.pnlBtn.SuspendLayout();
+            this.grpWatchProperty.SuspendLayout();
+            ((ISupportInitialize) this.dgvAnswer).BeginInit();
+            base.SuspendLayout();
+            base.grpCar.Size = new Size(469, 116);
+            base.pnlBtn.Location = new System.Drawing.Point(5, 345);
+            base.pnlBtn.Size = new Size(469, 28);
+            base.btnCancel.Location = new System.Drawing.Point(391, 3);
+            base.btnOK.Location = new System.Drawing.Point(306, 3);
+            this.grpWatchProperty.Controls.Add(this.txtanswerID);
+            this.grpWatchProperty.Controls.Add(this.chkAdFlag);
+            this.grpWatchProperty.Controls.Add(this.chkTtsFlag);
+            this.grpWatchProperty.Controls.Add(this.chkHandFlag);
+            this.grpWatchProperty.Controls.Add(this.chkControlFlag);
+            this.grpWatchProperty.Controls.Add(this.chkUrgencyFlag);
+            this.grpWatchProperty.Controls.Add(this.cmbQuestion);
+            this.grpWatchProperty.Controls.Add(this.lblQuestion);
+            this.grpWatchProperty.Controls.Add(this.lblAnswer);
+            this.grpWatchProperty.Controls.Add(this.dgvAnswer);
+            this.grpWatchProperty.Controls.Add(this.lblQuestionType);
+            this.grpWatchProperty.Dock = DockStyle.Top;
+            this.grpWatchProperty.Location = new System.Drawing.Point(5, 121);
+            this.grpWatchProperty.Name = "grpWatchProperty";
+            this.grpWatchProperty.Size = new Size(469, 224);
+            this.grpWatchProperty.TabIndex = 11;
+            this.grpWatchProperty.TabStop = false;
+            this.grpWatchProperty.Text = "设置参数";
+            this.txtanswerID.Location = new System.Drawing.Point(15, 268);
+            this.txtanswerID.Name = "txtanswerID";
+            this.txtanswerID.Size = new Size(100, 21);
+            this.txtanswerID.TabIndex = 25;
+            this.txtanswerID.Tag = "999";
+            this.chkAdFlag.AutoSize = true;
+            this.chkAdFlag.Location = new System.Drawing.Point(383, 19);
+            this.chkAdFlag.Name = "chkAdFlag";
+            this.chkAdFlag.Size = new Size(84, 16);
+            this.chkAdFlag.TabIndex = 24;
+            this.chkAdFlag.Tag = "16";
+            this.chkAdFlag.Text = "广告屏显示";
+            this.chkAdFlag.UseVisualStyleBackColor = true;
+            this.chkTtsFlag.AutoSize = true;
+            this.chkTtsFlag.Location = new System.Drawing.Point(289, 19);
+            this.chkTtsFlag.Name = "chkTtsFlag";
+            this.chkTtsFlag.Size = new Size(90, 16);
+            this.chkTtsFlag.TabIndex = 23;
+            this.chkTtsFlag.Tag = "8";
+            this.chkTtsFlag.Text = "终端TTS播读";
+            this.chkTtsFlag.UseVisualStyleBackColor = true;
+            this.chkHandFlag.AutoSize = true;
+            this.chkHandFlag.Location = new System.Drawing.Point(237, 19);
+            this.chkHandFlag.Name = "chkHandFlag";
+            this.chkHandFlag.Size = new Size(48, 16);
+            this.chkHandFlag.TabIndex = 22;
+            this.chkHandFlag.Tag = "4";
+            this.chkHandFlag.Text = "手柄";
+            this.chkHandFlag.UseVisualStyleBackColor = true;
+            this.chkControlFlag.AutoSize = true;
+            this.chkControlFlag.Location = new System.Drawing.Point(173, 20);
+            this.chkControlFlag.Name = "chkControlFlag";
+            this.chkControlFlag.Size = new Size(60, 16);
+            this.chkControlFlag.TabIndex = 21;
+            this.chkControlFlag.Tag = "2";
+            this.chkControlFlag.Text = "调度屏";
+            this.chkControlFlag.UseVisualStyleBackColor = true;
+            this.chkUrgencyFlag.AutoSize = true;
+            this.chkUrgencyFlag.Location = new System.Drawing.Point(121, 20);
+            this.chkUrgencyFlag.Name = "chkUrgencyFlag";
+            this.chkUrgencyFlag.Size = new Size(48, 16);
+            this.chkUrgencyFlag.TabIndex = 20;
+            this.chkUrgencyFlag.Tag = "1";
+            this.chkUrgencyFlag.Text = "紧急";
+            this.chkUrgencyFlag.UseVisualStyleBackColor = true;
+            this.cmbQuestion.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbQuestion.FormattingEnabled = true;
+            this.cmbQuestion.Items.AddRange(new object[] { "紧急", "终端TTS播读", "广告屏显示" });
+            this.cmbQuestion.Location = new System.Drawing.Point(122, 46);
+            this.cmbQuestion.Name = "cmbQuestion";
+            this.cmbQuestion.Size = new Size(161, 20);
+            this.cmbQuestion.TabIndex = 19;
+            this.cmbQuestion.SelectedIndexChanged += new EventHandler(this.cmbQuestion_SelectedIndexChanged);
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Location = new System.Drawing.Point(50, 49);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new Size(65, 12);
+            this.lblQuestion.TabIndex = 18;
+            this.lblQuestion.Text = "提问问题：";
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Location = new System.Drawing.Point(74, 72);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new Size(41, 12);
+            this.lblAnswer.TabIndex = 17;
+            this.lblAnswer.Text = "答案：";
+            this.dgvAnswer.AllowUserToAddRows = false;
+            this.dgvAnswer.AllowUserToDeleteRows = false;
+            this.dgvAnswer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAnswer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnswer.Columns.AddRange(new DataGridViewColumn[] { this.ID, this.答案, this.ParentID });
+            this.dgvAnswer.Location = new System.Drawing.Point(122, 72);
+            this.dgvAnswer.Name = "dgvAnswer";
+            this.dgvAnswer.NotMultiSelectedColumnName = (List<string>) resources.GetObject("dgvAnswer.NotMultiSelectedColumnName");
+            this.dgvAnswer.RowHeadersVisible = false;
+            this.dgvAnswer.RowTemplate.Height = 23;
+            this.dgvAnswer.Size = new Size(309, 146);
+            this.dgvAnswer.TabIndex = 16;
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 40.60914f;
+            this.ID.HeaderText = "序号";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.答案.DataPropertyName = "Answer";
+            this.答案.FillWeight = 159.3909f;
+            this.答案.HeaderText = "答案";
+            this.答案.Name = "答案";
+            this.答案.ReadOnly = true;
+            this.ParentID.DataPropertyName = "ParentID";
+            this.ParentID.HeaderText = "ParentID";
+            this.ParentID.Name = "ParentID";
+            this.ParentID.ReadOnly = true;
+            this.ParentID.Visible = false;
+            this.lblQuestionType.AutoSize = true;
+            this.lblQuestionType.Location = new System.Drawing.Point(50, 23);
+            this.lblQuestionType.Name = "lblQuestionType";
+            this.lblQuestionType.Size = new Size(65, 12);
+            this.lblQuestionType.TabIndex = 14;
+            this.lblQuestionType.Text = "提问类型：";
+            base.AutoScaleDimensions = new SizeF(6f, 12f);
+            base.AutoScaleMode =  System.Windows.Forms.AutoScaleMode.Font;
+            base.ClientSize = new Size(479, 378);
+            base.Controls.Add(this.grpWatchProperty);
+            base.Name = "JTBSendQuestion";
+            this.Text = "JTBSendQuestion";
+            base.Load += new EventHandler(this.JTBSendQuestion_Load);
+            base.Controls.SetChildIndex(base.grpCar, 0);
+            base.Controls.SetChildIndex(this.grpWatchProperty, 0);
+            base.Controls.SetChildIndex(base.pnlBtn, 0);
+            base.grpCar.ResumeLayout(false);
+            base.grpCar.PerformLayout();
+            base.pnlBtn.ResumeLayout(false);
+            this.grpWatchProperty.ResumeLayout(false);
+            this.grpWatchProperty.PerformLayout();
+            ((ISupportInitialize) this.dgvAnswer).EndInit();
+            base.ResumeLayout(false);
+            base.PerformLayout();
+        }
+
+       
+        private IContainer components;
+        private CheckBox chkAdFlag;
+        private CheckBox chkControlFlag;
+        private CheckBox chkHandFlag;
+        private CheckBox chkTtsFlag;
+        private CheckBox chkUrgencyFlag;
+        private ComboBox cmbQuestion;
+        private DataGridViewEx dgvAnswer;
+        private GroupBox grpWatchProperty;
+        private DataGridViewTextBoxColumn ID;
+        private Label lblAnswer;
+        private Label lblQuestion;
+        private Label lblQuestionType;
+        private DataGridViewTextBoxColumn ParentID;
+        private TextBox txtanswerID;
+        private DataGridViewTextBoxColumn 答案;
+    }
+}

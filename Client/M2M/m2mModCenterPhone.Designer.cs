@@ -1,0 +1,217 @@
+﻿namespace Client.M2M
+{
+    using Client;
+    using Remoting;
+    using ParamLibrary.Application;
+    using ParamLibrary.CmdParamInfo;
+    using System;
+    using System.Collections;
+    using System.ComponentModel;
+    using System.Drawing;
+    using System.Windows.Forms;
+    using WinFormsUI.Controls;
+
+    partial class m2mModCenterPhone
+    {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (this.components != null))
+            {
+                this.components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+       
+        private void InitializeComponent()
+        {
+            new ComponentResourceManager(typeof(m2mModCenterPhone));
+            this.grpLimitTel = new GroupBox();
+            this.lblLimitRmk = new Label();
+            this.lblStartPosition = new Label();
+            this.numStartPosition = new NumericUpDown();
+            this.lblLimitTelLst = new Label();
+            this.txtLimitTelLst = new TextBox();
+            this.grpCancelTel = new GroupBox();
+            this.label1 = new Label();
+            this.lblCancelPosition = new Label();
+            this.txtPosition = new TextBox();
+            this.lblPhoneStatus = new Label();
+            this.cmbPhoneStatus = new ComBox();
+            this.grpPhoneStatus = new GroupBox();
+            base.grpCar.SuspendLayout();
+            base.pnlBtn.SuspendLayout();
+            this.grpLimitTel.SuspendLayout();
+            this.numStartPosition.BeginInit();
+            this.grpCancelTel.SuspendLayout();
+            this.grpPhoneStatus.SuspendLayout();
+            base.SuspendLayout();
+            base.grpCar.Size = new Size(365, 116);
+            base.grpCar.TabIndex = 0;
+            base.pnlBtn.Location = new System.Drawing.Point(5, 420);
+            base.pnlBtn.Size = new Size(365, 28);
+            base.pnlBtn.TabIndex = 2;
+            base.btnCancel.TabIndex = 1;
+            base.btnOK.TabIndex = 0;
+            this.grpLimitTel.Controls.Add(this.lblStartPosition);
+            this.grpLimitTel.Controls.Add(this.numStartPosition);
+            this.grpLimitTel.Controls.Add(this.lblLimitTelLst);
+            this.grpLimitTel.Controls.Add(this.txtLimitTelLst);
+            this.grpLimitTel.Controls.Add(this.lblLimitRmk);
+            this.grpLimitTel.Dock = DockStyle.Top;
+            this.grpLimitTel.Location = new System.Drawing.Point(5, 121);
+            this.grpLimitTel.Name = "grpLimitTel";
+            this.grpLimitTel.Size = new Size(365, 179);
+            this.grpLimitTel.TabIndex = 3;
+            this.grpLimitTel.TabStop = false;
+            this.grpLimitTel.Text = "设置限拨号码参数";
+            this.lblLimitRmk.AutoSize = true;
+            this.lblLimitRmk.Location = new System.Drawing.Point(26, 68);
+            this.lblLimitRmk.Name = "lblLimitRmk";
+            this.lblLimitRmk.Size = new Size(83, 36);
+            this.lblLimitRmk.TabIndex = 10;
+            this.lblLimitRmk.Tag = "9999";
+            this.lblLimitRmk.Text = "(每行表示一个\r\n电话号码，最\r\n多32个号码)";
+            this.lblStartPosition.AutoSize = true;
+            this.lblStartPosition.Location = new System.Drawing.Point(50, 17);
+            this.lblStartPosition.Name = "lblStartPosition";
+            this.lblStartPosition.Size = new Size(65, 12);
+            this.lblStartPosition.TabIndex = 11;
+            this.lblStartPosition.Tag = "";
+            this.lblStartPosition.Text = "起始位置：";
+            this.numStartPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numStartPosition.Location = new System.Drawing.Point(122, 14);
+            int[] bits = new int[4];
+            bits[0] = 32;
+            this.numStartPosition.Maximum = new decimal(bits);
+            int[] numArray2 = new int[4];
+            numArray2[0] = 1;
+            this.numStartPosition.Minimum = new decimal(numArray2);
+            this.numStartPosition.Name = "numStartPosition";
+            this.numStartPosition.Size = new Size(161, 21);
+            this.numStartPosition.TabIndex = 0;
+            this.numStartPosition.Tag = "；";
+            int[] numArray3 = new int[4];
+            numArray3[0] = 1;
+            this.numStartPosition.Value = new decimal(numArray3);
+            this.lblLimitTelLst.AutoSize = true;
+            this.lblLimitTelLst.Location = new System.Drawing.Point(26, 47);
+            this.lblLimitTelLst.Name = "lblLimitTelLst";
+            this.lblLimitTelLst.Size = new Size(89, 12);
+            this.lblLimitTelLst.TabIndex = 11;
+            this.lblLimitTelLst.Tag = "";
+            this.lblLimitTelLst.Text = "限拨电话号码：";
+            this.txtLimitTelLst.AcceptsReturn = true;
+            this.txtLimitTelLst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLimitTelLst.ImeMode =  System.Windows.Forms.ImeMode.Disable;
+            this.txtLimitTelLst.Location = new System.Drawing.Point(122, 47);
+            this.txtLimitTelLst.Multiline = true;
+            this.txtLimitTelLst.Name = "txtLimitTelLst";
+            this.txtLimitTelLst.ScrollBars = ScrollBars.Vertical;
+            this.txtLimitTelLst.Size = new Size(161, 125);
+            this.txtLimitTelLst.TabIndex = 1;
+            this.txtLimitTelLst.Tag = "；";
+            this.txtLimitTelLst.KeyPress += new KeyPressEventHandler(this.txtLimitTelLst_KeyPress);
+            this.grpCancelTel.Controls.Add(this.lblCancelPosition);
+            this.grpCancelTel.Controls.Add(this.txtPosition);
+            this.grpCancelTel.Controls.Add(this.label1);
+            this.grpCancelTel.Dock = DockStyle.Top;
+            this.grpCancelTel.Location = new System.Drawing.Point(5, 300);
+            this.grpCancelTel.Name = "grpCancelTel";
+            this.grpCancelTel.Size = new Size(365, 70);
+            this.grpCancelTel.TabIndex = 4;
+            this.grpCancelTel.TabStop = false;
+            this.grpCancelTel.Text = "取消限拨电话参数";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(94, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new Size(209, 12);
+            this.label1.TabIndex = 15;
+            this.label1.Tag = "9999";
+            this.label1.Text = "格式例如：1,2,或者1,;为0则全部取消";
+            this.lblCancelPosition.AutoSize = true;
+            this.lblCancelPosition.Location = new System.Drawing.Point(50, 22);
+            this.lblCancelPosition.Name = "lblCancelPosition";
+            this.lblCancelPosition.Size = new Size(65, 12);
+            this.lblCancelPosition.TabIndex = 9;
+            this.lblCancelPosition.Text = "起始位置：";
+            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPosition.ImeMode =  System.Windows.Forms.ImeMode.Disable;
+            this.txtPosition.Location = new System.Drawing.Point(122, 18);
+            this.txtPosition.MaxLength = 15;
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new Size(161, 21);
+            this.txtPosition.TabIndex = 0;
+            this.txtPosition.Tag = "；";
+            this.txtPosition.Text = "0";
+            this.txtPosition.KeyPress += new KeyPressEventHandler(this.txtPosition_KeyPress);
+            this.lblPhoneStatus.AutoSize = true;
+            this.lblPhoneStatus.Location = new System.Drawing.Point(50, 22);
+            this.lblPhoneStatus.Name = "lblPhoneStatus";
+            this.lblPhoneStatus.Size = new Size(65, 12);
+            this.lblPhoneStatus.TabIndex = 9;
+            this.lblPhoneStatus.Text = "通话状态：";
+            this.cmbPhoneStatus.DisplayMember = "Display";
+            this.cmbPhoneStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbPhoneStatus.FlatStyle = FlatStyle.Flat;
+            this.cmbPhoneStatus.FormattingEnabled = true;
+            this.cmbPhoneStatus.Location = new System.Drawing.Point(122, 19);
+            this.cmbPhoneStatus.Name = "cmbPhoneStatus";
+            this.cmbPhoneStatus.Size = new Size(161, 20);
+            this.cmbPhoneStatus.TabIndex = 0;
+            this.cmbPhoneStatus.Tag = "；";
+            this.cmbPhoneStatus.ValueMember = "Value";
+            this.grpPhoneStatus.Controls.Add(this.lblPhoneStatus);
+            this.grpPhoneStatus.Controls.Add(this.cmbPhoneStatus);
+            this.grpPhoneStatus.Dock = DockStyle.Top;
+            this.grpPhoneStatus.Location = new System.Drawing.Point(5, 370);
+            this.grpPhoneStatus.Name = "grpPhoneStatus";
+            this.grpPhoneStatus.Size = new Size(365, 50);
+            this.grpPhoneStatus.TabIndex = 5;
+            this.grpPhoneStatus.TabStop = false;
+            this.grpPhoneStatus.Text = "通话权限";
+            base.AutoScaleDimensions = new SizeF(6f, 12f);
+            this.AutoSize = true;
+            base.ClientSize = new Size(375, 453);
+            base.Controls.Add(this.grpPhoneStatus);
+            base.Controls.Add(this.grpCancelTel);
+            base.Controls.Add(this.grpLimitTel);
+            base.Name = "m2mModCenterPhone";
+            this.Text = "号码设置";
+            base.Load += new EventHandler(this.itmModCenterPhone_Load);
+            base.Controls.SetChildIndex(base.grpCar, 0);
+            base.Controls.SetChildIndex(this.grpLimitTel, 0);
+            base.Controls.SetChildIndex(this.grpCancelTel, 0);
+            base.Controls.SetChildIndex(this.grpPhoneStatus, 0);
+            base.Controls.SetChildIndex(base.pnlBtn, 0);
+            base.grpCar.ResumeLayout(false);
+            base.grpCar.PerformLayout();
+            base.pnlBtn.ResumeLayout(false);
+            this.grpLimitTel.ResumeLayout(false);
+            this.grpLimitTel.PerformLayout();
+            this.numStartPosition.EndInit();
+            this.grpCancelTel.ResumeLayout(false);
+            this.grpCancelTel.PerformLayout();
+            this.grpPhoneStatus.ResumeLayout(false);
+            this.grpPhoneStatus.PerformLayout();
+            base.ResumeLayout(false);
+            base.PerformLayout();
+        }
+
+       
+        private IContainer components;
+        private ComBox cmbPhoneStatus;
+        private GroupBox grpCancelTel;
+        private GroupBox grpLimitTel;
+        private GroupBox grpPhoneStatus;
+        private Label label1;
+        private Label lblCancelPosition;
+        private Label lblLimitRmk;
+        private Label lblLimitTelLst;
+        private Label lblPhoneStatus;
+        private Label lblStartPosition;
+        private NumericUpDown numStartPosition;
+        private TextBox txtLimitTelLst;
+        private TextBox txtPosition;
+    }
+}
