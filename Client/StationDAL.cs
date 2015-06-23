@@ -8,13 +8,13 @@ using Client;
 
 namespace Client
 {
-    public class GpsStationDAL
+    public class StationDAL
     {
-        public GpsStationDAL()
+        public StationDAL()
         {
         }
 
-        public int Add(GpsStation model)
+        public int Add(Station model)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("insert into GpsStation(");
@@ -56,9 +56,9 @@ namespace Client
             return 0;
         }
 
-        public GpsStation DataRowToModel(DataRow row)
+        public Station DataRowToModel(DataRow row)
         {
-            GpsStation gpsStation = new GpsStation();
+            Station gpsStation = new Station();
             if (row != null)
             {
                 if (row["ID"] != null && row["ID"].ToString() != "")
@@ -147,7 +147,7 @@ namespace Client
             return false;
         }
 
-        public bool Exists(GpsStation model)
+        public bool Exists(Station model)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select * from GpsStation");
@@ -212,7 +212,7 @@ namespace Client
             return RemotingClient.ExecSql(stringBuilder.ToString());
         }
 
-        public GpsStation GetModel(int ID)
+        public Station GetModel(int ID)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select  top 1 ID,RegionDot,RegionName,RegionType,UpdateTime,StationType from GpsStation ");
@@ -225,7 +225,7 @@ namespace Client
             return this.DataRowToModel(dataTable.Rows[0]);
         }
 
-        public GpsStation GetModel(string codition)
+        public Station GetModel(string codition)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select  top 1 ID,RegionDot,RegionName,RegionType,UpdateTime,StationType from GpsStation ");
@@ -254,7 +254,7 @@ namespace Client
             return Convert.ToInt32(dataTable.Rows[0][0]);
         }
 
-        public bool Update(GpsStation model)
+        public bool Update(Station model)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("update GpsStation set ");

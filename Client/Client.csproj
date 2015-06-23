@@ -138,9 +138,6 @@
       <HintPath>..\@Libraries\ParamLibrary.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="PublicClass">
-      <HintPath>..\@Libraries\PublicClass.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -177,8 +174,8 @@
     <Compile Include="FixedForm.Designer.cs">
       <DependentUpon>FixedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GpsStation.cs" />
-    <Compile Include="GpsStationDAL.cs" />
+    <Compile Include="Station.cs" />
+    <Compile Include="StationDAL.cs" />
     <Compile Include="itmCarPlayTrack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -731,7 +728,7 @@
     <Compile Include="getphoto.Designer.cs">
       <DependentUpon>getphoto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GpsClientObj.cs">
+    <Compile Include="ClientObj.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ImageList.cs">
@@ -1761,31 +1758,30 @@
     <Content Include="Sound\UrgencyAlarm.WAV">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\Icon1.ico" />
-    <Content Include="seSkin\Glass.ssk">
+    <Content Include="Skin\Glass.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\MacOS.ssk">
+    <Content Include="Skin\MacOS.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\MSN.ssk">
+    <Content Include="Skin\MSN.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\Page.ssk">
+    <Content Include="Skin\Page.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\Steel.ssk">
+    <Content Include="Skin\Steel.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\vssver.scc">
+    <Content Include="Skin\vssver.scc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="seSkin\XPSilver.ssk">
+    <Content Include="Skin\XPSilver.ssk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -1935,6 +1931,10 @@
     <ProjectReference Include="..\Plugin\Plugin.csproj">
       <Project>{366BE2FE-03DC-4368-A9AF-CC538EDABB28}</Project>
       <Name>Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClass\PublicClass.csproj">
+      <Project>{87AD003F-27F0-4B2B-A3D3-0A01F717ECAA}</Project>
+      <Name>PublicClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\Remoting\Remoting.csproj">
       <Project>{2787D492-BB9C-4E6A-8274-283E2EBB863E}</Project>

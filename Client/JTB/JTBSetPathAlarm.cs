@@ -15,6 +15,7 @@
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class JTBSetPathAlarm : CarForm
     {
@@ -214,7 +215,7 @@
             {
                 MessageBox.Show("行驶最长时间不能小于行驶最短时间!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            else if (!PublicClass.Check.isNumeric(this.numMaxSpeedTm.Value.ToString(), PublicClass.Check.NumType.sByte) || ((Convert.ToInt32(this.numMaxSpeedTm.Value.ToString()) % 5) != 0))
+            else if (!Check.isNumeric(this.numMaxSpeedTm.Value.ToString(), Check.NumType.sByte) || ((Convert.ToInt32(this.numMaxSpeedTm.Value.ToString()) % 5) != 0))
             {
                 MessageBox.Show("持续时长必须为0-255之间5的倍数！");
             }
@@ -276,12 +277,12 @@
                     MessageBox.Show("路线\"" + str + "\"没有设置终止时间！");
                     return false;
                 }
-                if (!PublicClass.Check.CheckIsDate(strDate, out strResultDate))
+                if (!Check.CheckIsDate(strDate, out strResultDate))
                 {
                     MessageBox.Show("路线\"" + str + "\"起始时间格式有误！");
                     return false;
                 }
-                if (!PublicClass.Check.CheckIsDate(str3, out str5))
+                if (!Check.CheckIsDate(str3, out str5))
                 {
                     MessageBox.Show("路线\"" + str + "\"终止时间格式有误！");
                     return false;
@@ -481,13 +482,13 @@
                     }
                     string pStrNum = row2["MaxSpeed"].ToString();
                     string str4 = row2["MaxSpeedTm"].ToString();
-                    if (!PublicClass.Check.isNumeric(pStrNum, PublicClass.Check.NumType.sByte))
+                    if (!Check.isNumeric(pStrNum, Check.NumType.sByte))
                     {
                         MessageBox.Show("路线\"" + str + "\"最高时速必须为0-255的数字！");
                         return false;
                     }
                     alarm.Speed = byte.Parse(pStrNum);
-                    if (!PublicClass.Check.isNumeric(str4, PublicClass.Check.NumType.sByte) || ((int.Parse(str4) % 5) != 0))
+                    if (!Check.isNumeric(str4, Check.NumType.sByte) || ((int.Parse(str4) % 5) != 0))
                     {
                         MessageBox.Show("路线\"" + str + "\"持续时长必须为0-255之间5的倍数！");
                         return false;

@@ -11,6 +11,7 @@ using PublicClass;
 using System.Collections;
 using ParamLibrary.Application;
 using Remoting;
+using Library;
 
 namespace Client
 {

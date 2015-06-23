@@ -12,6 +12,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class m2mSetRegionSpeedAlarm : CarForm
     {
@@ -124,7 +125,7 @@
                     string str3 = table.Rows[i]["RegionId"].ToString();
                     string sRegionDot = table.Rows[i]["regionDot"].ToString();
                     table.Rows[i]["regionType"].ToString();
-                    if (PublicClass.Check.isRectangle(sRegionDot))
+                    if (Check.isRectangle(sRegionDot))
                     {
                         CheckBoxItem chk = new CheckBoxItem {
                             Name = str3,

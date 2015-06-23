@@ -40,7 +40,7 @@ namespace Client
         private bool bRespCallBack = true;
         private bool bTimeOut;
         public static Hashtable EbillTextList = new Hashtable();
-        public static GpsClientObj gpsClientObj = new GpsClientObj();
+        public static ClientObj clientObj = new ClientObj();
         private const string GrantType = "1";
         public static Hashtable htBatchName = null;
         private int iGetUpDateTime = 2000;
@@ -231,7 +231,7 @@ namespace Client
                                         IPlugin plugin = obj2 as IPlugin;
                                         if (plugin != null)
                                         {
-                                            plugin.Load(gpsClientObj);
+                                            plugin.Load(clientObj);
                                             this.arrPlugins.Add(plugin);
                                         }
                                     }
@@ -785,7 +785,7 @@ namespace Client
             string productVersion = "";
             try
             {
-                productVersion = FileVersionInfo.GetVersionInfo(Application.StartupPath + @"\GpsClient.exe").ProductVersion;
+                productVersion = Application.ProductVersion;
                 //Variable.sVersion = string.Format(" V{0}", productVersion);
                 string[] strArray = productVersion.Split(new char[] { '.' });
                 if (strArray.Length == 1)
@@ -1672,7 +1672,7 @@ namespace Client
         {
             foreach (System.Type type in t.GetInterfaces())
             {
-                if (type.FullName == "GpsClient.Plugin.IPlugin")
+                if (type.FullName == "Client.Plugin.IPlugin")
                 {
                     return true;
                 }
@@ -2652,7 +2652,7 @@ namespace Client
                     myLogForms.myImageList.addLogMsg(dtMsgResult);
                     break;
             }
-            gpsClientObj.execSendObject((int)oType, dtMsgResult);
+            clientObj.execSendObject((int)oType, dtMsgResult);
             dtMsgResult = null;
         }
 

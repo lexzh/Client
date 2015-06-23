@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CacheGeoCodeAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strlonlat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cacheAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CacheGeoCodeAddressResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreatCatelliteTile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="zoom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatCatelliteTileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatCatelliteTileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatCwtTile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="zoom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatCwtTileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatCwtTileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMapImgFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="zoom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="carnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMapImgFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateMapImgFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatGoogleTile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="width" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="height" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="zoom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatGoogleTileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatGoogleTileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExportTrackLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lonlats" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="shapeFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExportTrackLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExportTrackLineResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlarmStateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strInXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAlarmStatusResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOutXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllMapNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllMapNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMapNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCityDistrictInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idlonlats" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCityDistrictInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCityDistrictInfoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistrictInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idlonlats" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistrictInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDistrictInfoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistrictInfoByXY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistrictInfoByXYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDistrictInfoByXYResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullDistrictInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idlonlats" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullDistrictInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullDistrictInfoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="regionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoadNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idlonlats" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoadNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadRank">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoadRankResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoadRankResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeatherId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeatherIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeatherIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InitialStaticCache">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitialStaticCacheResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InitialStaticCacheResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsInRegionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInRegions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramStr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInRegionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsInRegionsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByAttr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryVal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByAttrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllLayerByAttrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByLngLatAttr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lng" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryVal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByLngLatAttrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllLayerByLngLatAttrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByPoint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllLayerByPointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAllLayerByPointResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RouteAnaly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sX" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="sY" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="eX" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="eY" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RouteAnalyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RouteAnalyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="T_CacheInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="T_CacheInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_CacheInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="T_ExportQueryIP">
+        <s:complexType />
+      </s:element>
+      <s:element name="T_ExportQueryIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="T_ExportQueryIPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="T_GetQueryCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="T_GetQueryCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="T_GetQueryCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CacheGeoCodeAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:CacheGeoCodeAddress" />
+  </wsdl:message>
+  <wsdl:message name="CacheGeoCodeAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:CacheGeoCodeAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatCatelliteTileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatCatelliteTile" />
+  </wsdl:message>
+  <wsdl:message name="CreatCatelliteTileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatCatelliteTileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatCwtTile" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatCwtTileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateMapImgFile" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateMapImgFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatGoogleTile" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatGoogleTileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineSoapIn">
+    <wsdl:part name="parameters" element="tns:ExportTrackLine" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineSoapOut">
+    <wsdl:part name="parameters" element="tns:ExportTrackLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarmState" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarmStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllMapNames" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllMapNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCityDistrictInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCityDistrictInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDistrictInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDistrictInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDistrictInfoByXY" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDistrictInfoByXYResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullDistrictInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullDistrictInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionNames" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoadName" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoadNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoadNames" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoadNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoadRank" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoadRankResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeatherId" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeatherIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitialStaticCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:InitialStaticCache" />
+  </wsdl:message>
+  <wsdl:message name="InitialStaticCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:InitialStaticCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:IsInRegion" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:IsInRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsInRegions" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsInRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByAttr" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByAttrResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByLngLatAttr" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByLngLatAttrResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByPoint" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllLayerByPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalySoapIn">
+    <wsdl:part name="parameters" element="tns:RouteAnaly" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalySoapOut">
+    <wsdl:part name="parameters" element="tns:RouteAnalyResponse" />
+  </wsdl:message>
+  <wsdl:message name="T_CacheInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:T_CacheInfo" />
+  </wsdl:message>
+  <wsdl:message name="T_CacheInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:T_CacheInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="T_ExportQueryIPSoapIn">
+    <wsdl:part name="parameters" element="tns:T_ExportQueryIP" />
+  </wsdl:message>
+  <wsdl:message name="T_ExportQueryIPSoapOut">
+    <wsdl:part name="parameters" element="tns:T_ExportQueryIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="T_GetQueryCountSoapIn">
+    <wsdl:part name="parameters" element="tns:T_GetQueryCount" />
+  </wsdl:message>
+  <wsdl:message name="T_GetQueryCountSoapOut">
+    <wsdl:part name="parameters" element="tns:T_GetQueryCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CacheGeoCodeAddressHttpGetIn">
+    <wsdl:part name="strlonlat" type="s:string" />
+    <wsdl:part name="cacheAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CacheGeoCodeAddressHttpGetOut" />
+  <wsdl:message name="CreatCatelliteTileHttpGetIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatCatelliteTileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileHttpGetIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileHttpGetIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="carnum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileHttpGetIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineHttpGetIn">
+    <wsdl:part name="lonlats" type="s1:StringArray" />
+    <wsdl:part name="shapeFileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateHttpGetIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapNamesHttpGetIn" />
+  <wsdl:message name="GetAllMapNamesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoHttpGetIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoHttpGetIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYHttpGetIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoHttpGetIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesHttpGetIn">
+    <wsdl:part name="regionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameHttpGetIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesHttpGetIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankHttpGetIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdHttpGetIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InitialStaticCacheHttpGetIn" />
+  <wsdl:message name="InitialStaticCacheHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionHttpGetIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="regionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsHttpGetIn">
+    <wsdl:part name="paramStr" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrHttpGetIn">
+    <wsdl:part name="pName" type="s:string" />
+    <wsdl:part name="cName" type="s:string" />
+    <wsdl:part name="queryVal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrHttpGetIn">
+    <wsdl:part name="lng" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="queryVal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointHttpGetIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalyHttpGetIn">
+    <wsdl:part name="sX" type="s:string" />
+    <wsdl:part name="sY" type="s:string" />
+    <wsdl:part name="eX" type="s:string" />
+    <wsdl:part name="eY" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="T_CacheInfoHttpGetIn" />
+  <wsdl:message name="T_CacheInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="T_ExportQueryIPHttpGetIn" />
+  <wsdl:message name="T_ExportQueryIPHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="T_GetQueryCountHttpGetIn" />
+  <wsdl:message name="T_GetQueryCountHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CacheGeoCodeAddressHttpPostIn">
+    <wsdl:part name="strlonlat" type="s:string" />
+    <wsdl:part name="cacheAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CacheGeoCodeAddressHttpPostOut" />
+  <wsdl:message name="CreatCatelliteTileHttpPostIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatCatelliteTileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileHttpPostIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatCwtTileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileHttpPostIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="carnum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMapImgFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileHttpPostIn">
+    <wsdl:part name="width" type="s:string" />
+    <wsdl:part name="height" type="s:string" />
+    <wsdl:part name="zoom" type="s:string" />
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatGoogleTileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineHttpPostIn">
+    <wsdl:part name="lonlats" type="s1:StringArray" />
+    <wsdl:part name="shapeFileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExportTrackLineHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateHttpPostIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmStateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapNamesHttpPostIn" />
+  <wsdl:message name="GetAllMapNamesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoHttpPostIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetCityDistrictInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoHttpPostIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYHttpPostIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDistrictInfoByXYHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoHttpPostIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetFullDistrictInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesHttpPostIn">
+    <wsdl:part name="regionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionNamesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameHttpPostIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesHttpPostIn">
+    <wsdl:part name="idlonlats" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadNamesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankHttpPostIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRoadRankHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdHttpPostIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeatherIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InitialStaticCacheHttpPostIn" />
+  <wsdl:message name="InitialStaticCacheHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionHttpPostIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="regionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsHttpPostIn">
+    <wsdl:part name="paramStr" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="IsInRegionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrHttpPostIn">
+    <wsdl:part name="pName" type="s:string" />
+    <wsdl:part name="cName" type="s:string" />
+    <wsdl:part name="queryVal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByAttrHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrHttpPostIn">
+    <wsdl:part name="lng" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="queryVal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByLngLatAttrHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointHttpPostIn">
+    <wsdl:part name="x" type="s:string" />
+    <wsdl:part name="y" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllLayerByPointHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalyHttpPostIn">
+    <wsdl:part name="sX" type="s:string" />
+    <wsdl:part name="sY" type="s:string" />
+    <wsdl:part name="eX" type="s:string" />
+    <wsdl:part name="eY" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RouteAnalyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="T_CacheInfoHttpPostIn" />
+  <wsdl:message name="T_CacheInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="T_ExportQueryIPHttpPostIn" />
+  <wsdl:message name="T_ExportQueryIPHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="T_GetQueryCountHttpPostIn" />
+  <wsdl:message name="T_GetQueryCountHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebgisServiceSoap">
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <wsdl:input message="tns:CacheGeoCodeAddressSoapIn" />
+      <wsdl:output message="tns:CacheGeoCodeAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <wsdl:input message="tns:CreatCatelliteTileSoapIn" />
+      <wsdl:output message="tns:CreatCatelliteTileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <wsdl:input message="tns:CreatCwtTileSoapIn" />
+      <wsdl:output message="tns:CreatCwtTileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <wsdl:input message="tns:CreateMapImgFileSoapIn" />
+      <wsdl:output message="tns:CreateMapImgFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <wsdl:input message="tns:CreatGoogleTileSoapIn" />
+      <wsdl:output message="tns:CreatGoogleTileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <wsdl:input message="tns:ExportTrackLineSoapIn" />
+      <wsdl:output message="tns:ExportTrackLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <wsdl:input message="tns:GetAlarmStateSoapIn" />
+      <wsdl:output message="tns:GetAlarmStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmStatus">
+      <wsdl:input message="tns:GetAlarmStatusSoapIn" />
+      <wsdl:output message="tns:GetAlarmStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <wsdl:input message="tns:GetAllMapNamesSoapIn" />
+      <wsdl:output message="tns:GetAllMapNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <wsdl:input message="tns:GetCityDistrictInfoSoapIn" />
+      <wsdl:output message="tns:GetCityDistrictInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <wsdl:input message="tns:GetDistrictInfoSoapIn" />
+      <wsdl:output message="tns:GetDistrictInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <wsdl:input message="tns:GetDistrictInfoByXYSoapIn" />
+      <wsdl:output message="tns:GetDistrictInfoByXYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <wsdl:input message="tns:GetFullDistrictInfoSoapIn" />
+      <wsdl:output message="tns:GetFullDistrictInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <wsdl:input message="tns:GetRegionNamesSoapIn" />
+      <wsdl:output message="tns:GetRegionNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <wsdl:input message="tns:GetRoadNameSoapIn" />
+      <wsdl:output message="tns:GetRoadNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <wsdl:input message="tns:GetRoadNamesSoapIn" />
+      <wsdl:output message="tns:GetRoadNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <wsdl:input message="tns:GetRoadRankSoapIn" />
+      <wsdl:output message="tns:GetRoadRankSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <wsdl:input message="tns:GetWeatherIdSoapIn" />
+      <wsdl:output message="tns:GetWeatherIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <wsdl:input message="tns:InitialStaticCacheSoapIn" />
+      <wsdl:output message="tns:InitialStaticCacheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <wsdl:input message="tns:IsInRegionSoapIn" />
+      <wsdl:output message="tns:IsInRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <wsdl:input message="tns:IsInRegionsSoapIn" />
+      <wsdl:output message="tns:IsInRegionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <wsdl:input message="tns:QueryAllLayerByAttrSoapIn" />
+      <wsdl:output message="tns:QueryAllLayerByAttrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <wsdl:input message="tns:QueryAllLayerByLngLatAttrSoapIn" />
+      <wsdl:output message="tns:QueryAllLayerByLngLatAttrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <wsdl:input message="tns:QueryAllLayerByPointSoapIn" />
+      <wsdl:output message="tns:QueryAllLayerByPointSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <wsdl:input message="tns:RouteAnalySoapIn" />
+      <wsdl:output message="tns:RouteAnalySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <wsdl:input message="tns:T_CacheInfoSoapIn" />
+      <wsdl:output message="tns:T_CacheInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <wsdl:input message="tns:T_ExportQueryIPSoapIn" />
+      <wsdl:output message="tns:T_ExportQueryIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <wsdl:input message="tns:T_GetQueryCountSoapIn" />
+      <wsdl:output message="tns:T_GetQueryCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebgisServiceHttpGet">
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <wsdl:input message="tns:CacheGeoCodeAddressHttpGetIn" />
+      <wsdl:output message="tns:CacheGeoCodeAddressHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <wsdl:input message="tns:CreatCatelliteTileHttpGetIn" />
+      <wsdl:output message="tns:CreatCatelliteTileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <wsdl:input message="tns:CreatCwtTileHttpGetIn" />
+      <wsdl:output message="tns:CreatCwtTileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <wsdl:input message="tns:CreateMapImgFileHttpGetIn" />
+      <wsdl:output message="tns:CreateMapImgFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <wsdl:input message="tns:CreatGoogleTileHttpGetIn" />
+      <wsdl:output message="tns:CreatGoogleTileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <wsdl:input message="tns:ExportTrackLineHttpGetIn" />
+      <wsdl:output message="tns:ExportTrackLineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <wsdl:input message="tns:GetAlarmStateHttpGetIn" />
+      <wsdl:output message="tns:GetAlarmStateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <wsdl:input message="tns:GetAllMapNamesHttpGetIn" />
+      <wsdl:output message="tns:GetAllMapNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <wsdl:input message="tns:GetCityDistrictInfoHttpGetIn" />
+      <wsdl:output message="tns:GetCityDistrictInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <wsdl:input message="tns:GetDistrictInfoHttpGetIn" />
+      <wsdl:output message="tns:GetDistrictInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <wsdl:input message="tns:GetDistrictInfoByXYHttpGetIn" />
+      <wsdl:output message="tns:GetDistrictInfoByXYHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <wsdl:input message="tns:GetFullDistrictInfoHttpGetIn" />
+      <wsdl:output message="tns:GetFullDistrictInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <wsdl:input message="tns:GetRegionNamesHttpGetIn" />
+      <wsdl:output message="tns:GetRegionNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <wsdl:input message="tns:GetRoadNameHttpGetIn" />
+      <wsdl:output message="tns:GetRoadNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <wsdl:input message="tns:GetRoadNamesHttpGetIn" />
+      <wsdl:output message="tns:GetRoadNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <wsdl:input message="tns:GetRoadRankHttpGetIn" />
+      <wsdl:output message="tns:GetRoadRankHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <wsdl:input message="tns:GetWeatherIdHttpGetIn" />
+      <wsdl:output message="tns:GetWeatherIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <wsdl:input message="tns:InitialStaticCacheHttpGetIn" />
+      <wsdl:output message="tns:InitialStaticCacheHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <wsdl:input message="tns:IsInRegionHttpGetIn" />
+      <wsdl:output message="tns:IsInRegionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <wsdl:input message="tns:IsInRegionsHttpGetIn" />
+      <wsdl:output message="tns:IsInRegionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <wsdl:input message="tns:QueryAllLayerByAttrHttpGetIn" />
+      <wsdl:output message="tns:QueryAllLayerByAttrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <wsdl:input message="tns:QueryAllLayerByLngLatAttrHttpGetIn" />
+      <wsdl:output message="tns:QueryAllLayerByLngLatAttrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <wsdl:input message="tns:QueryAllLayerByPointHttpGetIn" />
+      <wsdl:output message="tns:QueryAllLayerByPointHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <wsdl:input message="tns:RouteAnalyHttpGetIn" />
+      <wsdl:output message="tns:RouteAnalyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <wsdl:input message="tns:T_CacheInfoHttpGetIn" />
+      <wsdl:output message="tns:T_CacheInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <wsdl:input message="tns:T_ExportQueryIPHttpGetIn" />
+      <wsdl:output message="tns:T_ExportQueryIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <wsdl:input message="tns:T_GetQueryCountHttpGetIn" />
+      <wsdl:output message="tns:T_GetQueryCountHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebgisServiceHttpPost">
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <wsdl:input message="tns:CacheGeoCodeAddressHttpPostIn" />
+      <wsdl:output message="tns:CacheGeoCodeAddressHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <wsdl:input message="tns:CreatCatelliteTileHttpPostIn" />
+      <wsdl:output message="tns:CreatCatelliteTileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <wsdl:input message="tns:CreatCwtTileHttpPostIn" />
+      <wsdl:output message="tns:CreatCwtTileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <wsdl:input message="tns:CreateMapImgFileHttpPostIn" />
+      <wsdl:output message="tns:CreateMapImgFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <wsdl:input message="tns:CreatGoogleTileHttpPostIn" />
+      <wsdl:output message="tns:CreatGoogleTileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <wsdl:input message="tns:ExportTrackLineHttpPostIn" />
+      <wsdl:output message="tns:ExportTrackLineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <wsdl:input message="tns:GetAlarmStateHttpPostIn" />
+      <wsdl:output message="tns:GetAlarmStateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <wsdl:input message="tns:GetAllMapNamesHttpPostIn" />
+      <wsdl:output message="tns:GetAllMapNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <wsdl:input message="tns:GetCityDistrictInfoHttpPostIn" />
+      <wsdl:output message="tns:GetCityDistrictInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <wsdl:input message="tns:GetDistrictInfoHttpPostIn" />
+      <wsdl:output message="tns:GetDistrictInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <wsdl:input message="tns:GetDistrictInfoByXYHttpPostIn" />
+      <wsdl:output message="tns:GetDistrictInfoByXYHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <wsdl:input message="tns:GetFullDistrictInfoHttpPostIn" />
+      <wsdl:output message="tns:GetFullDistrictInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <wsdl:input message="tns:GetRegionNamesHttpPostIn" />
+      <wsdl:output message="tns:GetRegionNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <wsdl:input message="tns:GetRoadNameHttpPostIn" />
+      <wsdl:output message="tns:GetRoadNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <wsdl:input message="tns:GetRoadNamesHttpPostIn" />
+      <wsdl:output message="tns:GetRoadNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <wsdl:input message="tns:GetRoadRankHttpPostIn" />
+      <wsdl:output message="tns:GetRoadRankHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <wsdl:input message="tns:GetWeatherIdHttpPostIn" />
+      <wsdl:output message="tns:GetWeatherIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <wsdl:input message="tns:InitialStaticCacheHttpPostIn" />
+      <wsdl:output message="tns:InitialStaticCacheHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <wsdl:input message="tns:IsInRegionHttpPostIn" />
+      <wsdl:output message="tns:IsInRegionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <wsdl:input message="tns:IsInRegionsHttpPostIn" />
+      <wsdl:output message="tns:IsInRegionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <wsdl:input message="tns:QueryAllLayerByAttrHttpPostIn" />
+      <wsdl:output message="tns:QueryAllLayerByAttrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <wsdl:input message="tns:QueryAllLayerByLngLatAttrHttpPostIn" />
+      <wsdl:output message="tns:QueryAllLayerByLngLatAttrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <wsdl:input message="tns:QueryAllLayerByPointHttpPostIn" />
+      <wsdl:output message="tns:QueryAllLayerByPointHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <wsdl:input message="tns:RouteAnalyHttpPostIn" />
+      <wsdl:output message="tns:RouteAnalyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <wsdl:input message="tns:T_CacheInfoHttpPostIn" />
+      <wsdl:output message="tns:T_CacheInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <wsdl:input message="tns:T_ExportQueryIPHttpPostIn" />
+      <wsdl:output message="tns:T_ExportQueryIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <wsdl:input message="tns:T_GetQueryCountHttpPostIn" />
+      <wsdl:output message="tns:T_GetQueryCountHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebgisServiceSoap" type="tns:WebgisServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <soap:operation soapAction="http://tempuri.org/CacheGeoCodeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <soap:operation soapAction="http://tempuri.org/CreatCatelliteTile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <soap:operation soapAction="http://tempuri.org/CreatCwtTile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <soap:operation soapAction="http://tempuri.org/CreateMapImgFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <soap:operation soapAction="http://tempuri.org/CreatGoogleTile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <soap:operation soapAction="http://tempuri.org/ExportTrackLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <soap:operation soapAction="http://tempuri.org/GetAlarmState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmStatus">
+      <soap:operation soapAction="http://tempuri.org/GetAlarmStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <soap:operation soapAction="http://tempuri.org/GetAllMapNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <soap:operation soapAction="http://tempuri.org/GetCityDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <soap:operation soapAction="http://tempuri.org/GetDistrictInfoByXY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <soap:operation soapAction="http://tempuri.org/GetFullDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <soap:operation soapAction="http://tempuri.org/GetRegionNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <soap:operation soapAction="http://tempuri.org/GetRoadName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <soap:operation soapAction="http://tempuri.org/GetRoadNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <soap:operation soapAction="http://tempuri.org/GetRoadRank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <soap:operation soapAction="http://tempuri.org/GetWeatherId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <soap:operation soapAction="http://tempuri.org/InitialStaticCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <soap:operation soapAction="http://tempuri.org/IsInRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <soap:operation soapAction="http://tempuri.org/IsInRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <soap:operation soapAction="http://tempuri.org/QueryAllLayerByAttr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <soap:operation soapAction="http://tempuri.org/QueryAllLayerByLngLatAttr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <soap:operation soapAction="http://tempuri.org/QueryAllLayerByPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <soap:operation soapAction="http://tempuri.org/RouteAnaly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <soap:operation soapAction="http://tempuri.org/T_CacheInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <soap:operation soapAction="http://tempuri.org/T_ExportQueryIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <soap:operation soapAction="http://tempuri.org/T_GetQueryCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebgisServiceSoap12" type="tns:WebgisServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <soap12:operation soapAction="http://tempuri.org/CacheGeoCodeAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <soap12:operation soapAction="http://tempuri.org/CreatCatelliteTile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <soap12:operation soapAction="http://tempuri.org/CreatCwtTile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <soap12:operation soapAction="http://tempuri.org/CreateMapImgFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <soap12:operation soapAction="http://tempuri.org/CreatGoogleTile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <soap12:operation soapAction="http://tempuri.org/ExportTrackLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <soap12:operation soapAction="http://tempuri.org/GetAlarmState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetAlarmStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <soap12:operation soapAction="http://tempuri.org/GetAllMapNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetCityDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <soap12:operation soapAction="http://tempuri.org/GetDistrictInfoByXY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetFullDistrictInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <soap12:operation soapAction="http://tempuri.org/GetRegionNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <soap12:operation soapAction="http://tempuri.org/GetRoadName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <soap12:operation soapAction="http://tempuri.org/GetRoadNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <soap12:operation soapAction="http://tempuri.org/GetRoadRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <soap12:operation soapAction="http://tempuri.org/GetWeatherId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <soap12:operation soapAction="http://tempuri.org/InitialStaticCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <soap12:operation soapAction="http://tempuri.org/IsInRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <soap12:operation soapAction="http://tempuri.org/IsInRegions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <soap12:operation soapAction="http://tempuri.org/QueryAllLayerByAttr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <soap12:operation soapAction="http://tempuri.org/QueryAllLayerByLngLatAttr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <soap12:operation soapAction="http://tempuri.org/QueryAllLayerByPoint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <soap12:operation soapAction="http://tempuri.org/RouteAnaly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <soap12:operation soapAction="http://tempuri.org/T_CacheInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <soap12:operation soapAction="http://tempuri.org/T_ExportQueryIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <soap12:operation soapAction="http://tempuri.org/T_GetQueryCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebgisServiceHttpGet" type="tns:WebgisServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <http:operation location="/CacheGeoCodeAddress" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <http:operation location="/CreatCatelliteTile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <http:operation location="/CreatCwtTile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <http:operation location="/CreateMapImgFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <http:operation location="/CreatGoogleTile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <http:operation location="/ExportTrackLine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <http:operation location="/GetAlarmState" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <http:operation location="/GetAllMapNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <http:operation location="/GetCityDistrictInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <http:operation location="/GetDistrictInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <http:operation location="/GetDistrictInfoByXY" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <http:operation location="/GetFullDistrictInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <http:operation location="/GetRegionNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <http:operation location="/GetRoadName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <http:operation location="/GetRoadNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <http:operation location="/GetRoadRank" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <http:operation location="/GetWeatherId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <http:operation location="/InitialStaticCache" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <http:operation location="/IsInRegion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <http:operation location="/IsInRegions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <http:operation location="/QueryAllLayerByAttr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <http:operation location="/QueryAllLayerByLngLatAttr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <http:operation location="/QueryAllLayerByPoint" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <http:operation location="/RouteAnaly" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <http:operation location="/T_CacheInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <http:operation location="/T_ExportQueryIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <http:operation location="/T_GetQueryCount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebgisServiceHttpPost" type="tns:WebgisServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CacheGeoCodeAddress">
+      <http:operation location="/CacheGeoCodeAddress" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreatCatelliteTile">
+      <http:operation location="/CreatCatelliteTile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatCwtTile">
+      <http:operation location="/CreatCwtTile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMapImgFile">
+      <http:operation location="/CreateMapImgFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatGoogleTile">
+      <http:operation location="/CreatGoogleTile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTrackLine">
+      <http:operation location="/ExportTrackLine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmState">
+      <http:operation location="/GetAlarmState" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMapNames">
+      <http:operation location="/GetAllMapNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictInfo">
+      <http:operation location="/GetCityDistrictInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfo">
+      <http:operation location="/GetDistrictInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictInfoByXY">
+      <http:operation location="/GetDistrictInfoByXY" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullDistrictInfo">
+      <http:operation location="/GetFullDistrictInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionNames">
+      <http:operation location="/GetRegionNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadName">
+      <http:operation location="/GetRoadName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadNames">
+      <http:operation location="/GetRoadNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoadRank">
+      <http:operation location="/GetRoadRank" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherId">
+      <http:operation location="/GetWeatherId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitialStaticCache">
+      <http:operation location="/InitialStaticCache" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegion">
+      <http:operation location="/IsInRegion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRegions">
+      <http:operation location="/IsInRegions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByAttr">
+      <http:operation location="/QueryAllLayerByAttr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByLngLatAttr">
+      <http:operation location="/QueryAllLayerByLngLatAttr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllLayerByPoint">
+      <http:operation location="/QueryAllLayerByPoint" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RouteAnaly">
+      <http:operation location="/RouteAnaly" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_CacheInfo">
+      <http:operation location="/T_CacheInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_ExportQueryIP">
+      <http:operation location="/T_ExportQueryIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T_GetQueryCount">
+      <http:operation location="/T_GetQueryCount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebgisService">
+    <wsdl:port name="WebgisServiceSoap" binding="tns:WebgisServiceSoap">
+      <soap:address location="http://219.153.13.108:7260/stargis/openlayers/webgisservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebgisServiceSoap12" binding="tns:WebgisServiceSoap12">
+      <soap12:address location="http://219.153.13.108:7260/stargis/openlayers/webgisservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebgisServiceHttpGet" binding="tns:WebgisServiceHttpGet">
+      <http:address location="http://219.153.13.108:7260/stargis/openlayers/webgisservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebgisServiceHttpPost" binding="tns:WebgisServiceHttpPost">
+      <http:address location="http://219.153.13.108:7260/stargis/openlayers/webgisservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

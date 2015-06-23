@@ -12,6 +12,7 @@ using ParamLibrary.Entity;
 using ParamLibrary.CmdParamInfo;
 using ParamLibrary.Bussiness;
 using ParamLibrary.CarEntity;
+using Library;
 
 namespace Remoting
 {
@@ -2510,7 +2511,7 @@ namespace Remoting
                 RemotingManager.RegHttpChannel();
                 str = "http";
             }
-            return string.Format("{0}://{1}:{2}/GpsClientServerChannel/GpsRemotingServer", str, Variable.sServerIp, Variable.sPort);
+            return string.Format("{0}://{1}:{2}/ClientServerChannel/RemotingServer", str, Variable.sServerIp, Variable.sPort);
         }
 
         public static void GetTitleName()

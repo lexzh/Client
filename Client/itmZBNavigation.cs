@@ -10,6 +10,7 @@
     using System.Runtime.CompilerServices;
     using System.Text;
     using System.Windows.Forms;
+    using Library;
 
     public partial class itmZBNavigation : CarForm
     {
@@ -40,7 +41,7 @@
             }
         }
 
- private bool getParam()
+        private bool getParam()
         {
             if (string.IsNullOrEmpty(this.txtDestinationName.Text))
             {
@@ -52,8 +53,8 @@
             this.appRequest.CarValues = base.sValue;
             this.appRequest.CarPw = base.sPw;
             this.appRequest.CommMode = CmdParam.CommMode.混合方式;
-            byte[] buffer = PublicClass.Check.ConvertLatAndLon(this.Longitude);
-            byte[] buffer2 = PublicClass.Check.ConvertLatAndLon(this.Latitude);
+            byte[] buffer = Check.ConvertLatAndLon(this.Longitude);
+            byte[] buffer2 = Check.ConvertLatAndLon(this.Latitude);
             byte[] bytes = Encoding.Unicode.GetBytes(this.txtDestinationName.Text);
             byte[] array = new byte[(buffer.Length + buffer2.Length) + bytes.Length];
             int index = 0;

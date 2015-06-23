@@ -11,6 +11,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class itmCarBeBackTime : CarForm
     {
@@ -250,7 +251,7 @@
                     str2 = row["regionID"].ToString();
                     str3 = row["regionName"].ToString();
                     sRegionDot = row["regionDot"].ToString();
-                    if (PublicClass.Check.isRectangle(sRegionDot))
+                    if (Check.isRectangle(sRegionDot))
                     {
                         str5 = row["pathgroupid"].ToString();
                         if ((table2 != null) && (table2.Rows.Count > 0))

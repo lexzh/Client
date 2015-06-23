@@ -11,6 +11,7 @@
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+    using Library;
 
     public partial class m2mSetRegionAlarm : CarForm
     {
@@ -305,7 +306,7 @@
                     string str3 = table.Rows[i]["RegionId"].ToString();
                     string sRegionDot = table.Rows[i]["regionDot"].ToString();
                     string s = table.Rows[i]["regionType"].ToString();
-                    if ((base.OrderCode != CmdParam.OrderCode.行车记录设置) || PublicClass.Check.isRectangle(sRegionDot))
+                    if ((base.OrderCode != CmdParam.OrderCode.行车记录设置) || Check.isRectangle(sRegionDot))
                     {
                         DataRow row = this.m_dtRegion.NewRow();
                         row["regionName"] = str2;

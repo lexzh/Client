@@ -7,6 +7,7 @@
     using System.ComponentModel;
     using System.Drawing;
     using System.Windows.Forms;
+    using Library;
 
     public partial class itmSetPass : FixedForm
     {
@@ -45,7 +46,7 @@
             else
             {
                 string errMsg = "";
-                if (!PublicClass.Check.CheckStrongPwd(ref errMsg, pwd, replypwd, this.iPwdMinLen, this.txtNewPassword.MaxLength, this.iPwdMinStrong))
+                if (!Check.CheckStrongPwd(ref errMsg, pwd, replypwd, this.iPwdMinLen, this.txtNewPassword.MaxLength, this.iPwdMinStrong))
                 {
                     MessageBox.Show(errMsg);
                     this.clearPwd();
@@ -94,13 +95,13 @@
             string errMsg = "";
             string pwd = this.txtNewPassword.Text.Trim();
             string replypwd = this.txtConfirmPassword.Text.Trim();
-            bool flag = PublicClass.Check.CheckPwd(ref errMsg, pwd, replypwd);
+            bool flag = Check.CheckPwd(ref errMsg, pwd, replypwd);
             this.pnlOK.Visible = flag;
             this.pnlNG.Visible = !flag;
             Color transparent = Color.Transparent;
             if (pwd.Length >= this.iPwdMinLen)
             {
-                int pwdStrong = PublicClass.Check.GetPwdStrong(pwd);
+                int pwdStrong = Check.GetPwdStrong(pwd);
                 if (pwdStrong >= this.iPwdMinStrong)
                 {
                     transparent = Color.SpringGreen;

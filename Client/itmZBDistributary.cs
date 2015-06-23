@@ -11,6 +11,7 @@
     using System.Text;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class itmZBDistributary : CarForm
     {
@@ -112,8 +113,8 @@
                 case 1:
                 case 2:
                     buffer = Encoding.ASCII.GetBytes(this.txtPhone.Text.PadRight(20, '\0'));
-                    buffer2 = PublicClass.Check.ConvertLatAndLon(this.Longitude);
-                    buffer3 = PublicClass.Check.ConvertLatAndLon(this.Latitude);
+                    buffer2 = Check.ConvertLatAndLon(this.Longitude);
+                    buffer3 = Check.ConvertLatAndLon(this.Latitude);
                     buffer4 = Encoding.Unicode.GetBytes(this.txtTitle.Text);
                     break;
 
@@ -125,8 +126,8 @@
 
                 case 4:
                     buffer = Encoding.ASCII.GetBytes(this.txtPhone.Text.PadRight(20, '\0'));
-                    buffer2 = PublicClass.Check.ConvertLatAndLon(this.Longitude);
-                    buffer3 = PublicClass.Check.ConvertLatAndLon(this.Latitude);
+                    buffer2 = Check.ConvertLatAndLon(this.Longitude);
+                    buffer3 = Check.ConvertLatAndLon(this.Latitude);
                     break;
             }
             byte[] array = new byte[(30 + buffer4.Length) + bytes.Length];

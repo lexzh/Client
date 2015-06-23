@@ -9,6 +9,7 @@
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+    using Library;
 
     public partial class itmCarInOutOfRangeTime : CarForm
     {
@@ -115,7 +116,7 @@
             Dictionary<string, string> dataSource = new Dictionary<string, string>();
             foreach (DataRow row in this.AllRegion.Rows)
             {
-                if (PublicClass.Check.isRectangle(row["RegionDot"].ToString()))
+                if (Check.isRectangle(row["RegionDot"].ToString()))
                 {
                     dataSource[row["regionName"].ToString()] = row["regionID"] + "◎";
                 }

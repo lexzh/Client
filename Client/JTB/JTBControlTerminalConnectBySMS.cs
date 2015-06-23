@@ -11,6 +11,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class JTBControlTerminalConnectBySMS : CarForm
     {
@@ -95,7 +96,7 @@
                 this.txtServerIp.Focus();
                 return false;
             }
-            if (!PublicClass.Check.CheckIpAddress(this.txtServerIp.Text))
+            if (!Check.CheckIpAddress(this.txtServerIp.Text))
             {
                 MessageBox.Show(this.lblServerIp.Text.Replace("：", "") + "格式有误！");
                 this.txtServerIp.Focus();

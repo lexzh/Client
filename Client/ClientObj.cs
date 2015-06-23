@@ -13,7 +13,7 @@ namespace Client
     using System.Text;
     using System.Windows.Forms;
 
-    public class GpsClientObj : IClient
+    public class ClientObj : IClient
     {
         public event SendObject OnSendObject;
 

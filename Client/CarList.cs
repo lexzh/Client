@@ -12,6 +12,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using Remoting;
 using Client.Properties;
+using Library;
 
 namespace Client
 {
@@ -829,7 +830,7 @@ namespace Client
                 }
                 else
                 {
-                    sValue = PublicClass.Check.ValueReplace(sValue);
+                    sValue = Check.ValueReplace(sValue);
                     if ("0".Equals(this.comType.SelectedValue.ToString()))
                     {
                         rowFilter = "CarNum like '%" + sValue + "%'";

@@ -15,6 +15,7 @@
     using System.Threading;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class JTBitmSetRegionAlarm : CarForm
     {
@@ -851,8 +852,8 @@
                     {
                         string strResultDate = "";
                         string str6 = "";
-                        PublicClass.Check.CheckIsDate(strDate, out strResultDate);
-                        PublicClass.Check.CheckIsDate(str3, out str6);
+                        Check.CheckIsDate(strDate, out strResultDate);
+                        Check.CheckIsDate(str3, out str6);
                         if ((this.dgvArea.Rows[i].Cells["区域属性"].Value.ToString().IndexOf("根据时间") >= 0) && ((strResultDate.Length == 0) || (str6.Length == 0)))
                         {
                             MessageBox.Show("区域\"" + str + "\"须设置起始时间和终止时间!");
@@ -908,7 +909,7 @@
                                         MessageBox.Show("区域\"" + str + "\"的最高时速须大于0!");
                                         return false;
                                     }
-                                    if (!PublicClass.Check.isNumeric(result.ToString(), PublicClass.Check.NumType.sByte))
+                                    if (!Check.isNumeric(result.ToString(), Check.NumType.sByte))
                                     {
                                         MessageBox.Show("区域\"" + str + "\"最高时速必须为1-255的数字！");
                                         return false;
@@ -927,7 +928,7 @@
                                         MessageBox.Show("区域\"" + str + "\"的超速持续时间须大于0!");
                                         return false;
                                     }
-                                    if (!PublicClass.Check.isNumeric(num8.ToString(), PublicClass.Check.NumType.sByte))
+                                    if (!Check.isNumeric(num8.ToString(), Check.NumType.sByte))
                                     {
                                         MessageBox.Show("区域\"" + str + "\"持续时长必须为1-255之间的数字！");
                                         return false;
@@ -1081,11 +1082,11 @@
                     row["regionId"] = str3;
                     row["regionDot"] = sRegionDot;
                     row["pathgroupid"] = str6;
-                    if (PublicClass.Check.isRectangle(sRegionDot))
+                    if (Check.isRectangle(sRegionDot))
                     {
                         row["RegionType2"] = 0;
                     }
-                    else if (PublicClass.Check.isRoundness(sRegionDot))
+                    else if (Check.isRoundness(sRegionDot))
                     {
                         row["RegionType2"] = 1;
                     }
@@ -1147,8 +1148,8 @@
                         row["alarmCondition"] = this.getAlarmCondition(strAlarmCom);
                         if ((strDate.Length == 12) && (str8.Length == 12))
                         {
-                            row["beginTime"] = PublicClass.Check.ChangeDateFormat(strDate);
-                            row["endTime"] = PublicClass.Check.ChangeDateFormat(str8);
+                            row["beginTime"] = Check.ChangeDateFormat(strDate);
+                            row["endTime"] = Check.ChangeDateFormat(str8);
                         }
                         if (table.Columns.Contains("AlarmFlag"))
                         {

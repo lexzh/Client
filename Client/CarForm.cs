@@ -11,6 +11,7 @@ using WinFormsUI.Controls;
 using PublicClass;
 using Remoting;
 using System.Collections;
+using Library;
 
 namespace Client
 {

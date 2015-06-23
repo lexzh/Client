@@ -11,6 +11,7 @@ using Client.M2M;
 using System.Collections;
 using PublicClass;
 using System.Text.RegularExpressions;
+using Library;
 
 namespace Client
 {
@@ -1322,7 +1323,7 @@ namespace Client
             try
             {
                 string str = this.wbMap.getSelectedCarID().ToString();
-                MainForm.gpsClientObj.execSendObject(5, str);
+                MainForm.clientObj.execSendObject(5, str);
                 if (Variable.sShowTogether.Equals("1"))
                 {
                     MainForm.myLogForms.myCurrentPos.showNodeRecord(str);

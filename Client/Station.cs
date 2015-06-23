@@ -3,7 +3,7 @@
 namespace Client
 {
     [Serializable]
-    public class GpsStation
+    public class Station
     {
         private int _id;
 
@@ -89,7 +89,7 @@ namespace Client
             }
         }
 
-        public GpsStation()
+        public Station()
         {
         }
     }

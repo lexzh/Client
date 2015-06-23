@@ -13,6 +13,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class itmSegPath : CarForm
     {
@@ -378,13 +379,13 @@
                     }
                     string pStrNum = row.Cells["TopSpeed"].Value.ToString();
                     string str5 = row.Cells["HoldTime"].Value.ToString();
-                    if (!PublicClass.Check.isNumeric(pStrNum, PublicClass.Check.NumType.sByte))
+                    if (!Check.isNumeric(pStrNum, Check.NumType.sByte))
                     {
                         MessageBox.Show("路线\"" + str2 + "\"最高时速必须为0-255的数字！");
                         return false;
                     }
                     alarm.Speed = byte.Parse(pStrNum);
-                    if (!PublicClass.Check.isNumeric(str5, PublicClass.Check.NumType.sByte) || ((int.Parse(str5) % 5) != 0))
+                    if (!Check.isNumeric(str5, Check.NumType.sByte) || ((int.Parse(str5) % 5) != 0))
                     {
                         MessageBox.Show("路线\"" + str2 + "\"持续时长必须为0-255之间5的倍数！");
                         return false;
@@ -404,12 +405,12 @@
                         MessageBox.Show("路线\"" + str2 + "\"没有设置终止时间！");
                         return false;
                     }
-                    if (!PublicClass.Check.CheckIsDate(strDate, out strResultDate))
+                    if (!Check.CheckIsDate(strDate, out strResultDate))
                     {
                         MessageBox.Show("路线\"" + str2 + "\"起始时间格式有误！");
                         return false;
                     }
-                    if (!PublicClass.Check.CheckIsDate(str7, out str9))
+                    if (!Check.CheckIsDate(str7, out str9))
                     {
                         MessageBox.Show("路线\"" + str2 + "\"终止时间格式有误！");
                         return false;

@@ -14,6 +14,7 @@
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class itmSetCarInit : FixedForm
     {
@@ -413,7 +414,7 @@
 
         private string getChkText(bool isChecked)
         {
-            return PublicClass.Check.getChkText(isChecked);
+            return Check.getChkText(isChecked);
         }
 
         private string getCmnParam(Control ctrl)
@@ -548,7 +549,7 @@
             }
             if (!string.IsNullOrEmpty(str3))
             {
-                if (!PublicClass.Check.CheckIpAddress(str3))
+                if (!Check.CheckIpAddress(str3))
                 {
                     MessageBox.Show("TCPIP地址格式有误！");
                     this.txtTcpIp.Focus();
@@ -569,7 +570,7 @@
             }
             if (!string.IsNullOrEmpty(str4))
             {
-                if (!PublicClass.Check.CheckIpAddress(str4))
+                if (!Check.CheckIpAddress(str4))
                 {
                     MessageBox.Show("UDPIP地址格式有误！");
                     this.txtUdpIp.Focus();
@@ -606,7 +607,7 @@
             {
                 args.IsUseProxy = CmdParam.IsUseProxy.使用代理;
                 string strIpAddress = this.txtSurrogateIp.Text;
-                if (!PublicClass.Check.CheckIpAddress(strIpAddress))
+                if (!Check.CheckIpAddress(strIpAddress))
                 {
                     MessageBox.Show("代理服务器IP地址格式有误！");
                     this.txtSurrogateIp.Focus();
@@ -1000,19 +1001,19 @@
                 string str3 = car.cust_ShowAlarm;
                 string str4 = car.cust_level;
                 strCustName = car.cust_Name;
-                if (PublicClass.Check.isNumeric(pStrNum, PublicClass.Check.NumType.sInt))
+                if (Check.isNumeric(pStrNum, Check.NumType.sInt))
                 {
                     iCarAlarmSwitch = int.Parse(pStrNum);
                 }
-                if (PublicClass.Check.isNumeric(str2, PublicClass.Check.NumType.sInt))
+                if (Check.isNumeric(str2, Check.NumType.sInt))
                 {
                     iCarAlarmFlag = int.Parse(str2);
                 }
-                if (PublicClass.Check.isNumeric(str3, PublicClass.Check.NumType.sInt))
+                if (Check.isNumeric(str3, Check.NumType.sInt))
                 {
                     iShowAlarm = int.Parse(str3);
                 }
-                if (PublicClass.Check.isNumeric(str4, PublicClass.Check.NumType.sInt))
+                if (Check.isNumeric(str4, Check.NumType.sInt))
                 {
                     iCustLevel = int.Parse(str4);
                 }

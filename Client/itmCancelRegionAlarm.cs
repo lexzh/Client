@@ -9,6 +9,7 @@
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+    using Library;
 
     public partial class itmCancelRegionAlarm : CarForm
     {
@@ -43,11 +44,11 @@
             }
         }
 
- private bool getParam()
+        private bool getParam()
         {
             foreach (string str in this.txtAreaId.Text.Trim().Split(new char[] { '\\' }))
             {
-                if (!string.IsNullOrEmpty(str) && !PublicClass.Check.isNumeric(str, PublicClass.Check.NumType.sByte))
+                if (!string.IsNullOrEmpty(str) && !Check.isNumeric(str, Check.NumType.sByte))
                 {
                     MessageBox.Show(this.lblAreaId.Text.Trim(new char[] {(char)65306 }) + "超过指定范围！(0=<x<=64)");
                     this.txtAreaId.Focus();
@@ -75,7 +76,7 @@
             return true;
         }
 
- private void itmCancelRegionAlarm_Load(object sender, EventArgs e)
+        private void itmCancelRegionAlarm_Load(object sender, EventArgs e)
         {
             this.Text = this.m_sTitle;
             this.setGroupText();

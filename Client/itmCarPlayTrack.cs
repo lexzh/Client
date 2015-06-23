@@ -12,6 +12,7 @@ using System.Drawing.Printing;
 using WinFormsUI.Controls;
 using Remoting;
 using System.IO;
+using Library;
 
 namespace Client
 {
@@ -60,7 +61,7 @@ namespace Client
         private string stopIconType = "111";
 
         //停留时间显示 根据站点
-        private GpsStationDAL dal = new GpsStationDAL();
+        private StationDAL dal = new StationDAL();
         private DataTable dt, dat;
         private DateTime startTime, endTime;
         //private int iStationID = -1;

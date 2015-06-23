@@ -12,6 +12,7 @@
     using System.Text;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class db44SetRemoteInit : CarForm
     {
@@ -309,7 +310,7 @@
                         this.txtAdminCenter.Focus();
                         return false;
                     }
-                    if (!PublicClass.Check.CheckIpAddress(str8))
+                    if (!Check.CheckIpAddress(str8))
                     {
                         MessageBox.Show(string.Format("{0}地址格式有误！", this.chkAdminCenter.Text));
                         this.txtAdminCenter.Focus();
@@ -327,7 +328,7 @@
                         this.txtBakCenter.Focus();
                         return false;
                     }
-                    if (!PublicClass.Check.CheckIpAddress(str9))
+                    if (!Check.CheckIpAddress(str9))
                     {
                         MessageBox.Show(string.Format("{0}地址格式有误！", this.chkBakCenter.Text));
                         this.txtBakCenter.Focus();

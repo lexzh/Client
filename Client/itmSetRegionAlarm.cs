@@ -13,6 +13,7 @@
     using System.Drawing;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class itmSetRegionAlarm : CarForm
     {
@@ -89,12 +90,12 @@
                         }
                         string strResultDate = string.Empty;
                         string str5 = string.Empty;
-                        if (!PublicClass.Check.CheckIsDate(strDate, out strResultDate))
+                        if (!Check.CheckIsDate(strDate, out strResultDate))
                         {
                             MessageBox.Show("区域\"" + str + "\"起始时间格式有误！");
                             return false;
                         }
-                        if (!PublicClass.Check.CheckIsDate(str3, out str5))
+                        if (!Check.CheckIsDate(str3, out str5))
                         {
                             MessageBox.Show("区域\"" + str + "\"终止时间格式有误！");
                             return false;
@@ -793,8 +794,8 @@
                     {
                         string strResultDate = "";
                         string str6 = "";
-                        PublicClass.Check.CheckIsDate(strDate, out strResultDate);
-                        PublicClass.Check.CheckIsDate(str3, out str6);
+                        Check.CheckIsDate(strDate, out strResultDate);
+                        Check.CheckIsDate(str3, out str6);
                         alarm.AlarmCondition = this.getMultiAlarmCondition(i);
                         alarm.BeginTime = strResultDate;
                         alarm.EndTime = str6;
@@ -978,8 +979,8 @@
                         row["alarmCondition"] = this.getAlarmCondition(strAlarmCom);
                         if ((strDate.Length == 12) && (str8.Length == 12))
                         {
-                            row["beginTime"] = PublicClass.Check.ChangeDateFormat(strDate);
-                            row["endTime"] = PublicClass.Check.ChangeDateFormat(str8);
+                            row["beginTime"] = Check.ChangeDateFormat(strDate);
+                            row["endTime"] = Check.ChangeDateFormat(str8);
                         }
                     }
                     else

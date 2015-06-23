@@ -14,6 +14,7 @@
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class JTBitmSegPathEX : CarForm
     {
@@ -680,12 +681,12 @@
                             MessageBox.Show("路线\"" + str3 + "\"没有设置终止时间！");
                             return false;
                         }
-                        if (!PublicClass.Check.CheckIsDate(strDate, out strResultDate))
+                        if (!Check.CheckIsDate(strDate, out strResultDate))
                         {
                             MessageBox.Show("路线\"" + str3 + "\"起始时间格式有误！");
                             return false;
                         }
-                        if (!PublicClass.Check.CheckIsDate(str6, out str8))
+                        if (!Check.CheckIsDate(str6, out str8))
                         {
                             MessageBox.Show("路线\"" + str3 + "\"终止时间格式有误！");
                             return false;

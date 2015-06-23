@@ -12,6 +12,7 @@
     using System.Text;
     using System.Windows.Forms;
     using WinFormsUI.Controls;
+    using Library;
 
     public partial class JTBWirelessUpgradeCommand : CarForm
     {
@@ -96,7 +97,7 @@
                 this.txtUpgradeServerIp.Focus();
                 return false;
             }
-            if (!PublicClass.Check.CheckIpAddress(this.txtUpgradeServerIp.Text))
+            if (!Check.CheckIpAddress(this.txtUpgradeServerIp.Text))
             {
                 MessageBox.Show(this.txtUpgradeServerIp.Text.Replace("：", "") + "格式有误！");
                 this.txtUpgradeServerIp.Focus();

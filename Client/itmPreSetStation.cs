@@ -28,7 +28,7 @@ namespace Client
         private int tempsRadius;
         private string tempsRegionName = "";
         public DataTable dtType = new DataTable();
-        public GpsStationDAL dal = new GpsStationDAL();
+        public StationDAL dal = new StationDAL();
         private bool fnext;
         private int row;
 
@@ -225,7 +225,7 @@ namespace Client
         {
             this.wbMap.setZoomDownTool();
         }
-        private void execRefRegion(string PathDot, GpsStation models)
+        private void execRefRegion(string PathDot, Station models)
         {
             this.iRadius = int.Parse(this.numDistance.Value.ToString());
             string[] array = PathDot.Split(new char[]
@@ -296,7 +296,7 @@ namespace Client
                     MessageBox.Show("添加成功", "提示");
                     if (this.dt != null)
                     {
-                        GpsStation model = this.dal.GetModel("RegionName='" + models.RegionName + "'");
+                        Station model = this.dal.GetModel("RegionName='" + models.RegionName + "'");
                         DataRow dataRow2 = this.dt.NewRow();
                         dataRow2["ID"] = model.ID;
                         dataRow2["RegionDot"] = model.RegionDot;
@@ -348,7 +348,7 @@ namespace Client
                     this.txtRegionName.Focus();
                     return;
                 }
-                GpsStation models = new GpsStation();
+                Station models = new Station();
                 if (this.isModify)
                 {
                     this.sPoints = this.txtRegionDot.Text.Trim();

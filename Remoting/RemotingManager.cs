@@ -9,7 +9,7 @@ namespace Remoting
 {
     public class RemotingManager
     {
-        private const string _ChannelName = "GpsClientChannel";
+        private const string _ChannelName = "ClientChannel";
 
         private const int _timeOut = 120000;
 
@@ -20,7 +20,7 @@ namespace Remoting
                 IChannel[] registeredChannels = ChannelServices.RegisteredChannels;
                 for (int i = 0; i < (int)registeredChannels.Length; i++)
                 {
-                    if ("GpsClientChannel".Equals(registeredChannels[i].ChannelName))
+                    if ("ClientChannel".Equals(registeredChannels[i].ChannelName))
                     {
                         return true;
                     }
@@ -49,7 +49,7 @@ namespace Remoting
                 return;
             }
             Hashtable hashtables = new Hashtable();
-            hashtables["name"] = "GpsClientChannel";
+            hashtables["name"] = "ClientChannel";
             hashtables["timeout"] = 120000;
             ChannelServices.RegisterChannel(new TcpChannel(hashtables, null, null), false);
             bool hasRegChannel = RemotingManager.HasRegChannel;
@@ -63,7 +63,7 @@ namespace Remoting
             }
             BinaryClientFormatterSinkProvider binaryClientFormatterSinkProvider = new BinaryClientFormatterSinkProvider();
             IDictionary hashtables = new Hashtable();
-            hashtables["name"] = "GpsClientChannel";
+            hashtables["name"] = "ClientChannel";
             hashtables["timeout"] = 120000;
             hashtables["ProxyName"] = Variable.sHttpProxyIp;
             hashtables["ProxyPort"] = Variable.sHttpProxyPort;

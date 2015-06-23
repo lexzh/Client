@@ -133,9 +133,6 @@
     <Reference Include="ParamLibrary">
       <HintPath>..\@Libraries\ParamLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="PublicClass">
-      <HintPath>..\@Libraries\PublicClass.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
       <HintPath>System.dll</HintPath>
@@ -148,16 +145,17 @@
       <Name>System.Runtime.Remoting</Name>
       <HintPath>System.Runtime.Remoting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Remoting\RemotingClient.cs">
+    <Compile Include="RemotingClient.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Remoting\RemotingManager.cs">
+    <Compile Include="RemotingManager.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -177,6 +175,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PublicClass\PublicClass.csproj">
+      <Project>{87AD003F-27F0-4B2B-A3D3-0A01F717ECAA}</Project>
+      <Name>PublicClass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
